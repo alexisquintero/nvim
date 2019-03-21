@@ -1,6 +1,15 @@
 filetype plugin indent on
+syntax on
 
-set cc=120
+runtime macros/mathchit.vim
+
+silent !mkdir ~/.vim/private           > /dev/null 2>&1
+silent !mkdir ~/.vim/private/directory > /dev/null 2>&1
+silent !mkdir ~/.vim/private/undo      > /dev/null 2>&1
+
+set autoindent
+set backspace=indent,eol,start
+set colorcolumn=120
 set cursorline
 set directory=~/.vim/private/directory//
 set expandtab
@@ -9,14 +18,15 @@ set foldlevelstart=1
 set gdefault
 set hidden
 set ignorecase
-set inccommand=nosplit
+set incsearch
 set list listchars=tab:>-,trail:·
 set nobackup
 set noequalalways
 set noshowmode
 set notagrelative
 set number
-set ofu=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
+set ruler
 set scrolloff=5
 set shiftwidth=2
 set showcmd
@@ -33,8 +43,13 @@ set termguicolors
 set undodir=~/.vim/private/undo//
 set undofile
 set updatetime=100
+set wildmenu
 set wildmode=list:longest
 set wrapscan
+
+if has('nvim')
+  set inccommand=nosplit
+endif
 
 au FocusGained * :checktime
 
