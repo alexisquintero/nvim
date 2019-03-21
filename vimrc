@@ -102,3 +102,5 @@ cnoremap sudow w !sudo tee % >/dev/null
 tnoremap <Esc> <C-\><C-n>
 
 nnoremap <leader>+ :!ctags -R -f ./.git/tags .<CR>
+
+runtime plugins.vim
