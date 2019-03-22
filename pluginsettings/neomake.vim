@@ -1,4 +1,4 @@
-let s:neomake_fsc_maker = {
+let g:neomake_fsc_maker = {
   \ 'errorformat':
     \ '%E%f:%l: error: %m,' .
     \ '%Z%p^,' .
@@ -11,7 +11,7 @@ let s:neomake_fsc_maker = {
     \ '%-G%.%#'
   \ }
 
-let s:neomake_sbt_maker = {
+let g:neomake_sbt_maker = {
   \ 'exe': 'sbt',
   \ 'args': ['-Dsbt.log.noformat=true', 'compile'],
   \ 'append_file': 0,
@@ -25,8 +25,7 @@ let s:neomake_sbt_maker = {
       \ '%-G%.%#'
 \ }
 
-"let s:neomake_scala_enabled_makers = ['fsc']
-"let s:neomake_scala_enabled_makers = ['sbt']
-let s:neomake_javascript_enabled_makers = ['eslint']
-let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
-let s:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+"let g:neomake_scala_enabled_makers = ['fsc']
+"let g:neomake_scala_enabled_makers = ['sbt']
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exe = getcwd().'/node_modules/.bin/eslint'

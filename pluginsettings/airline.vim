@@ -1,6 +1,6 @@
-let s:airline#extensions#tabline#enabled = 1
-let s:airline#extensions#tabline#formatter = 'unique_tail'
-let s:airline_mode_map = {
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_mode_map = {
   \ '__' : '-',
   \ 'c'  : 'C',
   \ 'i'  : 'I',
@@ -19,9 +19,9 @@ let s:airline_mode_map = {
   \ 'V'  : 'V',
   \ ''   : 'V',
   \ }
-let s:airline#extensions#tabline#buffers_label = 'b'
-let s:airline#extensions#tabline#tabs_label = 't'
-let s:airline_extensions = ['whitespace', 'neomake']
-let s:airline_theme='oceanicnext'
+let g:airline#extensions#tabline#buffers_label = 'b'
+let g:airline#extensions#tabline#tabs_label = 't'
+let g:airline_extensions = ['whitespace', 'neomake']
+let g:airline_theme='oceanicnext'
 
 autocmd VimEnter * call AirlineInit()
