@@ -16,3 +16,5 @@ runtime mappings.vim
 runtime plugins.vim
 
 colorscheme OceanicNext
+
+runtime pluginsettings/neomake.vim
