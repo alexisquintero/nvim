@@ -14,3 +14,5 @@ runtime settings.vim
 runtime mappings.vim
 
 runtime plugins.vim
+
+colorscheme OceanicNext
