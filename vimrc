@@ -17,6 +17,7 @@ runtime plugins.vim
 
 colorscheme OceanicNext
 
+runtime pluginsettings/netrw.vim
 runtime pluginsettings/neomake.vim
 runtime pluginsettings/airline.vim
 runtime pluginsettings/oceanic-next.vim
