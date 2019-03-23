@@ -18,7 +18,6 @@ runtime plugins.vim
 colorscheme OceanicNext
 
 runtime pluginsettings/neomake.vim
-
 runtime pluginsettings/airline.vim
-
 runtime pluginsettings/oceanic-next.vim
+runtime pluginsettings/rainbow_parentheses.vim
