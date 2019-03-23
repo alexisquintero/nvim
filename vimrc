@@ -3,9 +3,8 @@ syntax on
 
 runtime macros/mathchit.vim
 
-silent !mkdir ~/.vim/private           > /dev/null 2>&1
-silent !mkdir ~/.vim/private/directory > /dev/null 2>&1
-silent !mkdir ~/.vim/private/undo      > /dev/null 2>&1
+silent !mkdir -p ~/.vim/private/directory > /dev/null 2>&1
+silent !mkdir -p ~/.vim/private/undo      > /dev/null 2>&1
 
 au FocusGained * :checktime
 
@@ -26,3 +25,4 @@ runtime pluginsettings/fzf.vim
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/ensime.vim
 runtime pluginsettings/deoplete.vim
+runtime pluginsettings/vim-gutentags.vim

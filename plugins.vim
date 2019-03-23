@@ -25,6 +25,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mboughaba/i3config.vim' "set ft=i3config
 Plug 'qpkorr/vim-bufkill'
+Plug 'ludovicchabant/vim-gutentags'
 
 if has('python')
   Plug 'Valloric/MatchTagAlways'
