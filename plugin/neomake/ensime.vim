@@ -11,5 +11,3 @@ function! Ensime_retypecheck() abort
   exe "SyntasticCheck ensime"
   exe "EnTypeCheck"
 endfunction
-autocmd BufWritePost *.scala call Ensime_retypecheck()
-"let g:neomake_scala_enabled_makers = []
