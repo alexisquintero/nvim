@@ -41,7 +41,6 @@ cnoremap <C-e> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-g> <C-c>
 cnoremap <C-n> <Down>
-cnoremap <C-o> <CR>
 cnoremap <C-p> <Up>
 cnoremap <C-y> <C-r>*
 cnoremap sudow w !sudo tee % >/dev/null
