@@ -1,5 +1,6 @@
 let mapleader = "\<Space>"
 
+nnoremap / /\v
 nnoremap <C-]> <C-]>zz
 nnoremap <C-e> 5<C-e>
 nnoremap <C-h> <C-w>h
@@ -32,6 +33,7 @@ nnoremap j gj
 nnoremap k gk
 nnoremap n nzzzv
 
+cnoremap %s/ %smagic/
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
 cnoremap <C-d> <Del>
@@ -43,6 +45,8 @@ cnoremap <C-o> <CR>
 cnoremap <C-p> <Up>
 cnoremap <C-y> <C-r>*
 cnoremap sudow w !sudo tee % >/dev/null
+
+vnoremap / /\v
 
 tnoremap <Esc> <C-\><C-n>
 

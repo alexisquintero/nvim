@@ -11,6 +11,7 @@ set hidden
 set ignorecase
 set incsearch
 set list listchars=tab:>-,trail:·
+set matchpairs+=<:>
 set nobackup
 set noequalalways
 set noshowmode

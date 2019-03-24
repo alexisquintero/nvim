@@ -9,9 +9,7 @@ silent !mkdir -p ~/.vim/private/undo      > /dev/null 2>&1
 au FocusGained * :checktime
 
 runtime settings.vim
-
 runtime mappings.vim
-
 runtime plugins.vim
 
 colorscheme OceanicNext
