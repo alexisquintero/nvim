@@ -27,6 +27,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mboughaba/i3config.vim' "set ft=i3config
 Plug 'qpkorr/vim-bufkill'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'rickhowe/diffchar.vim'
 
 if has('python')
   Plug 'Valloric/MatchTagAlways'
