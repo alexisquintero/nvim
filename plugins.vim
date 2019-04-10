@@ -6,7 +6,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'neomake/neomake'
-Plug 'vim-airline/vim-airline'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhartington/oceanic-next'
