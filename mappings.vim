@@ -21,6 +21,7 @@ nnoremap <leader>bf :exe ':silent !firefox %'<CR>
 nnoremap <leader>bo :exe ':silent !opera %'<CR>
 nnoremap <leader>f :let @+=expand('%:t')<CR>
 nnoremap <leader>q :ptjump <C-r><C-w><CR>
+nnoremap <silent> <leader>tt :ToggleTrail<CR>
 nnoremap <silent><C-n> :noh<CR>
 nnoremap @ :x<CR>
 nnoremap N Nzzzv
@@ -48,5 +49,6 @@ cnoremap sudow w !sudo tee % >/dev/null
 vnoremap / /\v
 
 tnoremap <Esc> <C-\><C-n>
+tnoremap <C-j> <CR>
 
 nnoremap <leader>+ :!ctags -R -f ./.git/tags .<CR>
