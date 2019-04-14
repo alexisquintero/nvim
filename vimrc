@@ -6,7 +6,7 @@ runtime macros/mathchit.vim
 silent !mkdir -p ~/.vim/private/directory > /dev/null 2>&1
 silent !mkdir -p ~/.vim/private/undo      > /dev/null 2>&1
 
-au FocusGained * :checktime
+autocmd FocusGained * :checktime
 
 runtime settings.vim
 runtime mappings.vim
