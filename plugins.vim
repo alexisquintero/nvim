@@ -36,13 +36,6 @@ if has('python3')
   Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 endif
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-elseif has('python3')
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-  Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-endif
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
 call plug#end()
