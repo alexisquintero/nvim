@@ -27,6 +27,7 @@ let g:neomake_sbt_maker = {
 
 "let g:neomake_scala_enabled_makers = ['fsc']
 "let g:neomake_scala_enabled_makers = ['sbt']
+let g:neomake_scala_enabled_makers = []
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exe = getcwd().'/node_modules/eslint/bin/eslint.js'
 

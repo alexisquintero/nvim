@@ -27,22 +27,10 @@ Plug 'mboughaba/i3config.vim' "set ft=i3config
 Plug 'qpkorr/vim-bufkill'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 if has('python')
   Plug 'Valloric/MatchTagAlways'
 endif
 
-if has('python3')
-  Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
-endif
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-elseif has('python3')
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-  Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-endif
 call plug#end()
