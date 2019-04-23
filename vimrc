@@ -17,11 +17,9 @@ colorscheme OceanicNext
 
 runtime pluginsettings/netrw.vim
 runtime pluginsettings/neomake.vim
-"runtime pluginsettings/airline.vim
 runtime pluginsettings/oceanic-next.vim
 runtime pluginsettings/rainbow_parentheses.vim
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/vim-cool.vim
-runtime pluginsettings/ensime.vim
-"runtime pluginsettings/deoplete.vim
 runtime pluginsettings/vim-gutentags.vim
+runtime pluginsettings/coc.vim

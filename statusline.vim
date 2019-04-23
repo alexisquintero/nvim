@@ -26,3 +26,4 @@ set statusline+=%#NeomakeInfoSign#                                  " Neomake in
 set statusline+=%{NeomakeInfos()}                                   " Neomake Infos
 set statusline+=%#Todo#                                             " Random neomake jobs color
 set statusline+=%{NeomakeJobs()}                                    " Neomake jobs
+set statusline+=\ %{coc#status()}\                                  " Coc statusline

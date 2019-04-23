@@ -27,15 +27,10 @@ Plug 'mboughaba/i3config.vim' "set ft=i3config
 Plug 'qpkorr/vim-bufkill'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 if has('python')
   Plug 'Valloric/MatchTagAlways'
 endif
-
-if has('python3')
-  Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
-endif
-
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
