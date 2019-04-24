@@ -23,3 +23,4 @@ runtime pluginsettings/fzf.vim
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/vim-gutentags.vim
 runtime pluginsettings/coc.vim
+runtime pluginsettings/i3config.vim

@@ -23,7 +23,7 @@ Plug 'tommcdo/vim-lion'
 Plug 'romainl/vim-cool'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'mboughaba/i3config.vim' "set ft=i3config
+Plug 'mboughaba/i3config.vim'
 Plug 'qpkorr/vim-bufkill'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
