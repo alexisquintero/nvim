@@ -4,6 +4,24 @@
       "command": "metals-vim",
       "rootPatterns": ["build.sbt"],
       "filetypes": ["scala", "sbt"]
+    },
+    "clojure-lsp": {
+      "command": "clojure-lsp",
+      "filetypes": ["clojure"],
+      "rootPatterns": ["project.clj"],
+      "trace.server": "verbose",
+      "initializationOptions": {
+        "source-paths": ["src", "test"],
+        "cljfmt": {
+          "indents": {
+            "#.*": [["block", 0]],
+            "ns": [["inner", 0], ["inner", 1]],
+            "and": [["inner", 0]],
+            "or": [["inner", 0]],
+            "are": [["inner", 0]]
+          }
+        }
+      }
     }
   }
 }
