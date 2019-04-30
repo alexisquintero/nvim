@@ -28,6 +28,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'clojure-vim/acid.nvim', { 'do': ':UpdateRemotePlugins' }
 
 if has('python')
   Plug 'Valloric/MatchTagAlways'
