@@ -16,8 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-speeddating'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ap/vim-css-color', { 'for': [ 'css', 'sass', 'less' ] }
-"Plug 'RRethy/vim-hexokinase', { 'for': [ 'css', 'sass', 'less' ] }
+Plug 'RRethy/vim-hexokinase', { 'for': [ 'css', 'sass', 'less' ] }
 Plug 'groenewege/vim-less', { 'for': [ 'sass', 'less' ] }
 Plug 'tommcdo/vim-lion'
 Plug 'romainl/vim-cool'

@@ -25,3 +25,4 @@ runtime pluginsettings/vim-gutentags.vim
 runtime pluginsettings/coc.vim
 runtime pluginsettings/i3config.vim
 runtime pluginsettings/acid.vim
+runtime pluginsettings/hexokinase.vim
