@@ -28,6 +28,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'clojure-vim/acid.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'fholiveira/vim-clojure-static', { 'for': 'clojure', 'branch': 'hack-update'}
+Plug 'clojure-vim/async-clj-highlight',  { 'for': 'clojure', 'branch': 'acid-autocmd' }
 
 if has('python')
   Plug 'Valloric/MatchTagAlways'
