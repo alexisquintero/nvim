@@ -4,12 +4,6 @@
       "command": "metals-vim",
       "rootPatterns": ["build.sbt"],
       "filetypes": ["scala", "sbt"]
-    },
-    "clojure-lsp": {
-      "command": "clojure-lsp",
-      "rootPatterns": ["project.clj"],
-      "filetypes": ["clojure"],
-      "additionalSchemes": ["jar", "zipfile"]
     }
   }
 }
