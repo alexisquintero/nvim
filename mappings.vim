@@ -13,6 +13,7 @@ nnoremap <C-y> 5<C-y>
 nnoremap <Leader>* :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <M-p> :Ag<CR>
 nnoremap <SPACE> <Nop>
+nnoremap <leader>@ :x<CR>
 nnoremap <leader>F :let @+=@%<CR>
 nnoremap <leader>Q :pclose<CR>
 nnoremap <leader>bC :exe ':silent !chromium-browser %'<CR>
@@ -24,9 +25,7 @@ nnoremap <leader>q :ptjump <C-r><C-w><CR>
 nnoremap <leader>s :set spell!<CR>
 nnoremap <silent> <leader>tt :ToggleTrail<CR>
 nnoremap <silent><C-n> :noh<CR>
-nnoremap @ :x<CR>
 nnoremap N Nzzzv
-nnoremap Q @
 nnoremap Y y$
 nnoremap ]h :try<bar>lprev<bar>catch /^Vim\%((\a\+)\)\=:E\%(553\<bar>42\):/<bar>llast<bar>endtry<cr>
 nnoremap ]l :try<bar>lnext<bar>catch /^Vim\%((\a\+)\)\=:E\%(553\<bar>42\):/<bar>lfirst<bar>endtry<cr>
