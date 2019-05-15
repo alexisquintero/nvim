@@ -26,6 +26,8 @@ set showmatch
 set sidescrolloff=3
 set smartcase
 set softtabstop=2
+set spell
+set spelllang=en_us
 set splitbelow
 set splitright
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\

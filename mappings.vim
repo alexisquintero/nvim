@@ -21,6 +21,7 @@ nnoremap <leader>bf :exe ':silent !firefox %'<CR>
 nnoremap <leader>bo :exe ':silent !opera %'<CR>
 nnoremap <leader>f :let @+=expand('%:t')<CR>
 nnoremap <leader>q :ptjump <C-r><C-w><CR>
+nnoremap <leader>s :set spell!<CR>
 nnoremap <silent> <leader>tt :ToggleTrail<CR>
 nnoremap <silent><C-n> :noh<CR>
 nnoremap @ :x<CR>
