@@ -28,7 +28,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'fholiveira/vim-clojure-static', { 'for': 'clojure', 'branch': 'hack-update'}
-Plug 'clojure-vim/async-clj-highlight',  { 'for': 'clojure', 'branch': 'acid-autocmd' }
+Plug 'clojure-vim/async-clj-highlight',  { 'for': 'clojure' }
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'guns/vim-sexp',    {'for': 'clojure'}
 

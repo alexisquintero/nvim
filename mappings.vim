@@ -48,7 +48,7 @@ cnoremap sudow w !sudo tee % >/dev/null
 
 vnoremap / /\v
 
-tnoremap <Esc> <C-\><C-n>
+tnoremap <leader><Esc> <C-\><C-n>
 tnoremap <C-j> <CR>
 
 nnoremap <leader>+ :!ctags -R -f ./.git/tags .<CR>
