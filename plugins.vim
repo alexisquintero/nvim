@@ -31,9 +31,6 @@ Plug 'fholiveira/vim-clojure-static', { 'for': 'clojure', 'branch': 'hack-update
 Plug 'clojure-vim/async-clj-highlight',  { 'for': 'clojure' }
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'guns/vim-sexp',    {'for': 'clojure'}
-
-if has('python')
-  Plug 'Valloric/MatchTagAlways'
-endif
+Plug 'andymass/vim-matchup'
 
 call plug#end()
