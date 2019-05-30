@@ -16,7 +16,6 @@ colorscheme nord
 
 runtime pluginsettings/netrw.vim
 runtime pluginsettings/neomake.vim
-runtime pluginsettings/rainbow_parentheses.vim
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/vim-gutentags.vim

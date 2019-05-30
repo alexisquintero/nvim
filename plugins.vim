@@ -8,13 +8,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'neomake/neomake'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'jvican/vim-scala', { 'for': 'scala' }
 Plug 'gre/play2vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'RRethy/vim-hexokinase', { 'for': [ 'css', 'sass', 'less' ] }
+Plug 'RRethy/vim-hexokinase', { 'for': [ 'css', 'sass', 'less', 'html' ] }
 Plug 'groenewege/vim-less', { 'for': [ 'sass', 'less' ] }
 Plug 'tommcdo/vim-lion'
 Plug 'romainl/vim-cool'
@@ -25,10 +24,8 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'clojure-vim/async-clj-highlight',  { 'for': 'clojure' }
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
-Plug 'guns/vim-sexp',    {'for': 'clojure'}
+Plug 'guns/vim-sexp', {'for': 'clojure'}
 Plug 'andymass/vim-matchup'
 Plug 'arcticicestudio/nord-vim'
-
 call plug#end()
