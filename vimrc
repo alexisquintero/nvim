@@ -10,12 +10,12 @@ runtime settings.vim
 runtime mappings.vim
 runtime plugins.vim
 runtime statusline.vim
+runtime colorscheme.vim
 
-colorscheme OceanicNext
+colorscheme nord
 
 runtime pluginsettings/netrw.vim
 runtime pluginsettings/neomake.vim
-runtime pluginsettings/oceanic-next.vim
 runtime pluginsettings/rainbow_parentheses.vim
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/vim-cool.vim
