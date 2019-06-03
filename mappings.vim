@@ -13,6 +13,7 @@ nnoremap <C-y> 5<C-y>
 nnoremap <Leader>* :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <M-p> :Ag<CR>
 nnoremap <SPACE> <Nop>
+nnoremap <leader>+ :!ctags -R -f ./.git/tags .<CR>
 nnoremap <leader>@ :x<CR>
 nnoremap <leader>F :let @+=@%<CR>
 nnoremap <leader>Q :pclose<CR>
@@ -50,5 +51,3 @@ vnoremap / /\v
 
 tnoremap <leader><Esc> <C-\><C-n>
 tnoremap <C-j> <CR>
-
-nnoremap <leader>+ :!ctags -R -f ./.git/tags .<CR>

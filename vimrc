@@ -15,10 +15,8 @@ runtime colorscheme.vim
 colorscheme nord
 
 runtime pluginsettings/netrw.vim
-runtime pluginsettings/neomake.vim
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/vim-cool.vim
-runtime pluginsettings/vim-gutentags.vim
 runtime pluginsettings/coc.vim
 runtime pluginsettings/i3config.vim
 runtime pluginsettings/hexokinase.vim

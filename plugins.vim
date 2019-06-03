@@ -5,7 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'neomake/neomake'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'jvican/vim-scala', { 'for': 'scala' }
@@ -21,7 +20,6 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mboughaba/i3config.vim'
 Plug 'qpkorr/vim-bufkill'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'rickhowe/diffchar.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
