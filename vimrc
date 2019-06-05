@@ -22,3 +22,4 @@ runtime pluginsettings/i3config.vim
 runtime pluginsettings/hexokinase.vim
 runtime pluginsettings/iced.vim
 runtime pluginsettings/sexp.vim
+runtime pluginsettings/gitgutter.vim
