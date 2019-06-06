@@ -23,7 +23,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'rickhowe/diffchar.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
-Plug 'guns/vim-sexp', {'for': 'clojure'}
+Plug 'guns/vim-sexp', {'for': ['clojure', 'scheme', 'lisp', 'timl'] }
 Plug 'andymass/vim-matchup'
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
