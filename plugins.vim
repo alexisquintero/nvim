@@ -12,7 +12,6 @@ Plug 'gre/play2vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'RRethy/vim-hexokinase', { 'for': [ 'css', 'sass', 'less', 'html' ] }
 Plug 'groenewege/vim-less', { 'for': [ 'sass', 'less' ] }
 Plug 'tommcdo/vim-lion'
 Plug 'romainl/vim-cool'
