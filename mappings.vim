@@ -12,7 +12,7 @@ nnoremap <C-y> 5<C-y>
 nnoremap <SPACE> <Nop>
 nnoremap <leader>+ :!ctags -R -f ./.git/tags .<CR>
 nnoremap <leader>@ :x<CR>
-nnoremap <leader>F :let @+=@%<CR>
+nnoremap <leader>F :let @+=@%<CR> \| :echo getreg('+')<CR>
 nnoremap <leader>Q :pclose<CR>
 nnoremap <leader>bC :exe ':silent !chromium-browser %'<CR>
 nnoremap <leader>bc :exe ':silent !google-chrome %'<CR>
