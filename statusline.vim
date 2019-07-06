@@ -5,7 +5,6 @@ set statusline=%#StatusLineTerm#                               " File name color
 set statusline+=\ %t\                                          " file name
 set statusline+=%2*%h%m%r%w%*\                                 " flags [Help, Modified, ReadOnly, Preview]
 set statusline+=%#StatusLineTermNC#                            " Main area color
-set statusline+=%{BufferTrail()}                               " Buffer trail, local to window
 set statusline+=%=                                             " right align
 set statusline+=%#StatusLineTerm#                              " Regular statusline color
 set statusline+=[%{strlen(&ft)?&ft:'none'}\|                   " filetype
