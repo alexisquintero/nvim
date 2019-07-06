@@ -30,7 +30,6 @@ set spell
 set spelllang=en_us
 set splitbelow
 set splitright
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 set tagcase=smart
 set tags=.git/tags
 set termguicolors
