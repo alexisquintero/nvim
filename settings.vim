@@ -1,7 +1,6 @@
 set autoindent
 set backspace=indent,eol,start
 set colorcolumn=120
-set cursorline
 set directory=~/.vim/private/directory//
 set expandtab
 set fileencoding=utf-8

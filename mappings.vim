@@ -1,6 +1,8 @@
 let mapleader = "\<Space>"
 
 nnoremap / /\v
+nnoremap <silent> n n:call HLNext(0.4)<cr>
+nnoremap <silent> N N:call HLNext(0.4)<cr>
 nnoremap <C-]> <C-]>zz
 nnoremap <C-e> 5<C-e>
 nnoremap <C-h> <C-w>h
