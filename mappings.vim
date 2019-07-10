@@ -10,8 +10,6 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-t> <C-t>zz
 nnoremap <C-y> 5<C-y>
 nnoremap <SPACE> <Nop>
-nnoremap <leader>+ :!ctags -R -f ./.git/tags .<CR>
-nnoremap <leader>@ :x<CR>
 nnoremap <leader>F :let @+=@%<CR> \| :echo getreg('+')<CR>
 nnoremap <leader>Q :pclose<CR>
 nnoremap <leader>bC :exe ':silent !chromium-browser %'<CR>
@@ -19,16 +17,9 @@ nnoremap <leader>bc :exe ':silent !google-chrome %'<CR>
 nnoremap <leader>bf :exe ':silent !firefox %'<CR>
 nnoremap <leader>bo :exe ':silent !opera %'<CR>
 nnoremap <leader>f :let @+=expand('%:t')<CR>
-nnoremap <leader>q :ptjump <C-r><C-w><CR>
-nnoremap <leader>s :set spell!<CR>
-nnoremap <silent> <leader>tt :ToggleTrail<CR>
-nnoremap N Nzzzv
 nnoremap Y y$
 nnoremap ]h :try<bar>lprev<bar>catch /^Vim\%((\a\+)\)\=:E\%(553\<bar>42\):/<bar>llast<bar>endtry<cr>
 nnoremap ]l :try<bar>lnext<bar>catch /^Vim\%((\a\+)\)\=:E\%(553\<bar>42\):/<bar>lfirst<bar>endtry<cr>
-nnoremap j gj
-nnoremap k gk
-nnoremap n nzzzv
 
 cnoremap %s/ %smagic/
 cnoremap <C-a> <Home>

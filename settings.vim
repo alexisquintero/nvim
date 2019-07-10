@@ -6,27 +6,22 @@ set directory=~/.vim/private/directory//
 set expandtab
 set fileencoding=utf-8
 set foldlevelstart=1
-set gdefault
 set hidden
 set ignorecase
 set incsearch
 set list listchars=tab:>-,trail:·
 set matchpairs+=<:>
-set nobackup
 set noequalalways
 set noshowmode
 set notagrelative
 set number
 set omnifunc=syntaxcomplete#Complete
-set ruler
 set scrolloff=5
 set shiftwidth=2
 set showcmd
-set showmatch
 set sidescrolloff=3
 set smartcase
 set softtabstop=2
-set spell
 set spelllang=en_us
 set splitbelow
 set splitright
