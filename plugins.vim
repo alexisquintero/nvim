@@ -26,4 +26,5 @@ Plug 'guns/vim-sexp', {'for': ['clojure', 'scheme', 'lisp', 'timl'] }
 Plug 'andymass/vim-matchup'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-commentary'
 call plug#end()

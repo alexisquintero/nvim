@@ -1,2 +1,2 @@
-nmap <leader>ph <Plug>GitGutterPrevHunk
-nmap <leader>nh <Plug>GitGutterNextHunk
+nmap [g <Plug>GitGutterPrevHunk
+nmap ]g <Plug>GitGutterNextHunk
