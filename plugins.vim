@@ -28,4 +28,5 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'wincent/loupe'
+Plug 'tpope/vim-rsi'
 call plug#end()
