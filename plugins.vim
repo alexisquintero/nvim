@@ -27,4 +27,5 @@ Plug 'andymass/vim-matchup'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
+Plug 'wincent/loupe'
 call plug#end()
