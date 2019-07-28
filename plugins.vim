@@ -29,4 +29,5 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'wincent/loupe'
 Plug 'tpope/vim-rsi'
+Plug 'machakann/vim-sandwich'
 call plug#end()
