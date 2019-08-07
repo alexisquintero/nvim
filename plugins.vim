@@ -19,7 +19,6 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mboughaba/i3config.vim', { 'for': 'i3config' }
 Plug 'qpkorr/vim-bufkill'
-Plug 'rickhowe/diffchar.vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'guns/vim-sexp', {'for': ['clojure', 'scheme', 'lisp', 'timl'] }

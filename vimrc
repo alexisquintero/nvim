@@ -22,4 +22,3 @@ runtime pluginsettings/i3config.vim
 runtime pluginsettings/iced.vim
 runtime pluginsettings/sexp.vim
 runtime pluginsettings/gitgutter.vim
-runtime pluginsettings/diffchar.vim
