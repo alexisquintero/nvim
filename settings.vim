@@ -29,7 +29,7 @@ set tags=.git/tags
 set termguicolors
 set undodir=~/.vim/private/undo//
 set undofile
-set updatetime=100
+set updatetime=300
 set wildmenu
 set wildmode=list:longest
 set wrapscan
