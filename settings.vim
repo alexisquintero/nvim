@@ -5,9 +5,11 @@ set directory=~/.vim/private/directory//
 set expandtab
 set fileencoding=utf-8
 set foldlevelstart=1
+set formatoptions+=j
 set hidden
 set ignorecase
 set incsearch
+set laststatus=2
 set list listchars=tab:>-,trail:·
 set matchpairs+=<:>
 set noequalalways
