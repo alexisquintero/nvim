@@ -17,7 +17,7 @@ set noshowmode
 set notagrelative
 set number
 set omnifunc=syntaxcomplete#Complete
-set scrolloff=5
+set scrolloff=3
 set shiftwidth=2
 set showcmd
 set sidescrolloff=3
