@@ -27,4 +27,5 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-sandwich'
+Plug 'wellle/targets.vim'
 call plug#end()
