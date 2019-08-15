@@ -28,4 +28,5 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-sandwich'
 Plug 'wellle/targets.vim'
+Plug 'itspriddle/vim-shellcheck'
 call plug#end()
