@@ -4,8 +4,6 @@ syntax on
 silent !mkdir -p ~/.vim/private/directory > /dev/null 2>&1
 silent !mkdir -p ~/.vim/private/undo      > /dev/null 2>&1
 
-autocmd FocusGained * :checktime
-
 runtime settings.vim
 runtime mappings.vim
 runtime plugins.vim
