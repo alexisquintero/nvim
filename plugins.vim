@@ -20,7 +20,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mboughaba/i3config.vim', { 'for': 'i3config' }
 Plug 'qpkorr/vim-bufkill'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'guns/vim-sexp', {'for': ['clojure', 'scheme', 'lisp', 'timl'] }
+Plug 'guns/vim-sexp'
 Plug 'andymass/vim-matchup'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'

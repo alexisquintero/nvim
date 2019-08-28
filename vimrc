@@ -17,6 +17,5 @@ runtime pluginsettings/fzf.vim
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/coc.vim
 runtime pluginsettings/i3config.vim
-runtime pluginsettings/iced.vim
 runtime pluginsettings/sexp.vim
 runtime pluginsettings/gitgutter.vim
