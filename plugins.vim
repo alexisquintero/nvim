@@ -20,7 +20,6 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'mboughaba/i3config.vim', { 'for': 'i3config' }
 Plug 'qpkorr/vim-bufkill'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'liquidz/vim-iced', {'for': 'clojure'}
 Plug 'guns/vim-sexp', {'for': ['clojure', 'scheme', 'lisp', 'timl'] }
 Plug 'andymass/vim-matchup'
 Plug 'arcticicestudio/nord-vim'
@@ -29,4 +28,5 @@ Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-sandwich'
 Plug 'wellle/targets.vim'
 Plug 'itspriddle/vim-shellcheck'
+Plug 'tpope/vim-fireplace'
 call plug#end()
