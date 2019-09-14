@@ -42,6 +42,4 @@ endif
 
 if has('nvim')
   set inccommand=nosplit
-  let g:python_host_prog="/usr/bin/python2"
-  let g:python3_host_prog="/usr/bin/python3"
 endif
