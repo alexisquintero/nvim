@@ -7,7 +7,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'jvican/vim-scala', { 'for': 'scala' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'gre/play2vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
