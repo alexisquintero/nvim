@@ -28,4 +28,5 @@ Plug 'machakann/vim-sandwich'
 Plug 'wellle/targets.vim'
 Plug 'itspriddle/vim-shellcheck'
 Plug 'tpope/vim-fireplace'
+Plug 'janko/vim-test'
 call plug#end()
