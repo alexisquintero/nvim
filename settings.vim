@@ -33,7 +33,7 @@ set undodir=~/.vim/private/undo//
 set undofile
 set updatetime=300
 set wildmenu
-set wildmode=list:longest
+set wildmode=list:longest,full
 set wrapscan
 
 if has('nvim-0.3.2') || has("patch-8.1.0360")
