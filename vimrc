@@ -22,3 +22,4 @@ runtime pluginsettings/coc.vim
 runtime pluginsettings/i3config.vim
 runtime pluginsettings/sexp.vim
 runtime pluginsettings/gitgutter.vim
+runtime pluginsettings/targets.vim
