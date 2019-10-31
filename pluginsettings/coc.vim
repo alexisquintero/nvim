@@ -1,3 +1,5 @@
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-css', 'coc-html']
+
 " Use <c-space> for trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 

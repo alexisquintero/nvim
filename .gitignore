@@ -1,5 +1,6 @@
 private/
 plugged/
+.lsp/
 
 plug.vim
 plug.vim.old
