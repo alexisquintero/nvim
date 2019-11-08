@@ -29,4 +29,5 @@ Plug 'wellle/targets.vim'
 Plug 'itspriddle/vim-shellcheck'
 Plug 'tpope/vim-fireplace'
 Plug 'janko/vim-test'
+Plug 'christoomey/vim-conflicted'
 call plug#end()
