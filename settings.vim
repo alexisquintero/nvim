@@ -4,6 +4,7 @@ set colorcolumn=120
 set directory=~/.vim/private/directory//
 set expandtab
 set fileencoding=utf-8
+set foldmethod=indent
 set foldlevelstart=1
 set formatoptions+=j
 set hidden
