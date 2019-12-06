@@ -1,6 +1,6 @@
 let mapleader = "\<Space>"
 
-nnoremap <C-g> :let @+=@%<CR><C-g>
+nnoremap <C-g> :call setreg('+', getreg('%')."#".line('.'))<CR><C-g>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
