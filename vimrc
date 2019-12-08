@@ -23,5 +23,5 @@ runtime pluginsettings/i3config.vim
 runtime pluginsettings/sexp.vim
 runtime pluginsettings/gitgutter.vim
 runtime pluginsettings/targets.vim
-runtime pluginsettings/scala.vim
+runtime pluginsettings/vim-scala.vim
 runtime pluginsettings/sandwich.vim
