@@ -8,6 +8,8 @@ nnoremap <C-l> <C-w>l
 nnoremap <SPACE> <Nop>
 nnoremap Y y$
 
+inoremap <C-U> <C-G>u<C-U>
+
 cnoremap sudow w !sudo tee % >/dev/null
 
 tnoremap <leader><Esc> <C-\><C-n>
