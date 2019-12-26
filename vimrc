@@ -25,3 +25,4 @@ runtime pluginsettings/sexp.vim
 runtime pluginsettings/targets.vim
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/vim-scala.vim
+runtime pluginsettings/vim-printer.vim
