@@ -29,4 +29,5 @@ Plug 'itspriddle/vim-shellcheck'
 Plug 'tpope/vim-fireplace'
 Plug 'janko/vim-test'
 Plug 'meain/vim-printer'
+Plug 'tpope/vim-rhubarb'
 call plug#end()
