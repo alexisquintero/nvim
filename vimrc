@@ -11,9 +11,10 @@ runtime settings.vim
 runtime mappings.vim
 runtime plugins.vim
 runtime statusline.vim
-runtime colorscheme.vim
+" runtime colorscheme.vim
 
-colorscheme nord
+" colorscheme nord
+colorscheme substrata
 
 runtime pluginsettings/coc.vim
 runtime pluginsettings/fzf.vim

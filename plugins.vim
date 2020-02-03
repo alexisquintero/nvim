@@ -30,4 +30,5 @@ Plug 'tpope/vim-fireplace'
 Plug 'janko/vim-test'
 Plug 'meain/vim-printer'
 Plug 'tpope/vim-rhubarb'
+Plug 'arzg/vim-substrata'
 call plug#end()
