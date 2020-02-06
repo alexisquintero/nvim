@@ -48,3 +48,5 @@ endif
 if has('nvim')
   set inccommand=nosplit
 endif
+
+let g:clojure_align_subforms = 1
