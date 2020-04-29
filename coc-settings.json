@@ -2,7 +2,9 @@
   "diagnostic.errorSign": "●",
   "diagnostic.warningSign": "●",
   "diagnostic.infoSign": "●",
+  "codeLens.enable": true,
   "python.jediEnabled": false,
+  "metals.statusBarEnabled": true,
   "languageserver": {
     "clojure-lsp": {
       "command": "clojure-lsp",
