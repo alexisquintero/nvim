@@ -4,8 +4,8 @@ set colorcolumn=120
 set directory=~/.vim/private/directory//
 set expandtab
 set fileencoding=utf-8
-set foldmethod=indent
 set foldlevelstart=1
+set foldmethod=indent
 set formatoptions+=j
 set hidden
 set ignorecase
@@ -48,5 +48,3 @@ endif
 if has('nvim')
   set inccommand=nosplit
 endif
-
-let g:clojure_align_subforms = 1
