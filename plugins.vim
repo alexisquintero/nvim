@@ -18,7 +18,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mboughaba/i3config.vim', { 'for': 'i3config' }
 Plug 'qpkorr/vim-bufkill'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'guns/vim-sexp'
 Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'
