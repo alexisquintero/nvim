@@ -2,6 +2,7 @@ set autoindent
 set backspace=indent,eol,start
 set colorcolumn=120
 set directory=~/.vim/private/directory//
+set equalalways
 set expandtab
 set fileencoding=utf-8
 set foldlevelstart=1
@@ -39,10 +40,6 @@ set wrapscan
 
 if has('nvim-0.3.2') || has("patch-8.1.0360")
     set diffopt=filler,internal,algorithm:histogram,indent-heuristic
-endif
-
-if has('nvim-0.4.0')
-  set pumblend=20
 endif
 
 if has('nvim')
