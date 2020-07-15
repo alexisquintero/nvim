@@ -8,6 +8,7 @@ set fileencoding=utf-8
 set foldlevelstart=1
 set foldmethod=indent
 set formatoptions+=j
+set formatoptions-=ro
 set hidden
 set ignorecase
 set incsearch
