@@ -12,10 +12,7 @@ Plug 'gre/play2vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'groenewege/vim-less'
 Plug 'romainl/vim-cool'
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'mboughaba/i3config.vim', { 'for': 'i3config' }
 Plug 'qpkorr/vim-bufkill'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
