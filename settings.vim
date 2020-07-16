@@ -18,7 +18,6 @@ set matchpairs+=<:>
 set noequalalways
 set noshowmode
 set notagrelative
-set number
 set omnifunc=syntaxcomplete#Complete
 set scrolloff=3
 set shiftwidth=2
