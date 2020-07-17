@@ -5,7 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'yuttie/comfortable-motion.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'derekwyatt/vim-scala'
 Plug 'gre/play2vim'
@@ -14,10 +13,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'romainl/vim-cool'
 Plug 'mboughaba/i3config.vim', { 'for': 'i3config' }
-Plug 'qpkorr/vim-bufkill'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'guns/vim-sexp'
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-sandwich'
