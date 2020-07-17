@@ -12,7 +12,7 @@ set formatoptions-=ro
 set hidden
 set ignorecase
 set incsearch
-set laststatus=2
+set laststatus=0
 set list listchars=tab:>-,trail:·
 set matchpairs+=<:>
 set noequalalways

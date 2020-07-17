@@ -23,7 +23,6 @@ silent !mkdir -p ~/.vim/private/undo      > /dev/null 2>&1
 runtime settings.vim
 runtime mappings.vim
 runtime plugins.vim
-runtime statusline.vim
 " runtime colorscheme.vim
 
 " colorscheme nord
