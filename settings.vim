@@ -19,6 +19,7 @@ set noequalalways
 set noshowmode
 set notagrelative
 set omnifunc=syntaxcomplete#Complete
+set ruler
 set scrolloff=3
 set shiftwidth=2
 set showcmd
@@ -37,6 +38,10 @@ set updatetime=300
 set wildmenu
 set wildmode=list:longest,full
 set wrapscan
+
+set rulerformat+=%{coc#status()}      " Coc status
+set rulerformat+=%=                   " Right align
+set rulerformat+=%(\ %l,%c%V%)\ %P    " Default~ rulerformat
 
 if has('nvim-0.3.2') || has("patch-8.1.0360")
     set diffopt=filler,internal,algorithm:histogram,indent-heuristic
