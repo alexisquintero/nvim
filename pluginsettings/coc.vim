@@ -1,3 +1,5 @@
+hi CocFloating guibg=none guifg=none
+
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-metals']
 
 " Use <c-space> for trigger completion.
