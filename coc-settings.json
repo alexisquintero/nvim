@@ -4,14 +4,17 @@
   "diagnostic.infoSign": "●",
   "codeLens.enable": true,
   "suggest.echodocSupport": true,
-  "python.jediEnabled": false,
   "metals.statusBarEnabled": true,
   "languageserver": {
     "clojure-lsp": {
       "command": "clojure-lsp",
       "rootPatterns": ["project.clj"],
-      "filetypes": ["clojure"],
+      "filetypes": [ "clojure" ],
       "additionalSchemes": ["jar", "zipfile"]
+    },
+    "nix": {
+      "command": "rnix-lsp",
+      "filetypes": [ "nix" ]
     }
   }
 }
