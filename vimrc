@@ -20,7 +20,7 @@ syntax on
 runtime settings.vim
 runtime mappings.vim
 runtime plugins.vim
-" runtime colorscheme.vim
+" runtime pluginsettings/nord.vim
 
 " colorscheme nord
 colorscheme substrata
