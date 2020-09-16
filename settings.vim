@@ -1,7 +1,6 @@
 set autoindent
 set backspace=indent,eol,start
 set colorcolumn=120
-set directory=~/.vim/private/directory//
 set equalalways
 set expandtab
 set fileencoding=utf-8
@@ -32,7 +31,6 @@ set splitright
 set tagcase=smart
 set tags=.git/tags
 set termguicolors
-set undodir=~/.vim/private/undo//
 set undofile
 set updatetime=300
 set wildmenu
@@ -50,3 +48,13 @@ endif
 if has('nvim')
   set inccommand=nosplit
 endif
+
+let s:vim_files = $HOME."/.config/nvim/private"
+let &undodir = s:vim_files."/undo//"
+let &directory = s:vim_files."/directory//"
+
+for d in [ &undodir, &directory ]
+  call mkdir(d, "p", 700)
+endfor
+
+let &viminfofile = s:vim_files."/viminfo"
