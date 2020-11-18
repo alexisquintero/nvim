@@ -56,7 +56,7 @@ let &undodir = s:vim_files."/undo//"
 let &directory = s:vim_files."/directory//"
 
 for d in [ &undodir, &directory ]
-  call mkdir(d, "p", 700)
+  silent exec "!mkdir -p " . d " > /dev/null 2>&1"
 endfor
 
 let &viminfofile = s:vim_files."/viminfo"
