@@ -37,8 +37,10 @@ set wildmenu
 set wildmode=list:longest,full
 set wrapscan
 
-set rulerformat+=%{coc#status()}      " Coc status
+set rulerformat=%59(%)                " Increase ruler size
 set rulerformat+=%=                   " Right align
+set rulerformat+=%{coc#status()}      " Coc status
+set rulerformat+=\ \|                 " Separator
 set rulerformat+=%(\ %l,%c%V%)\ %P    " Default~ rulerformat
 
 if has('nvim-0.3.2') || has("patch-8.1.0360")
