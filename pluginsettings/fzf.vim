@@ -6,4 +6,4 @@ command! -bang -nargs=* Rg2
       \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
       \ fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
 
-let g:fzf_history_dir = '~/.vim/private/fzf-history'
+let g:fzf_history_dir = $HOME.'/.config/nvim/private/fzf-history'
