@@ -1,7 +1,7 @@
 {
   "diagnostic.enableSign": false,
   "diagnostic.virtualText": true,
-  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextCurrentLineOnly": true,
   "codeLens.enable": true,
   "suggest.echodocSupport": true,
   "metals.statusBarEnabled": true,
