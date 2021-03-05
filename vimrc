@@ -1,9 +1,6 @@
 let g:python_host_prog  = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 
-filetype plugin indent on
-syntax on
-
 runtime settings.vim
 runtime mappings.vim
 runtime plugins.vim
