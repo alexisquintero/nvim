@@ -1,9 +1,11 @@
 set colorcolumn=120
+set diffopt=filler,internal,algorithm:histogram,indent-heuristic
 set expandtab
 set foldlevelstart=1
 set foldmethod=indent
 set hidden
 set ignorecase
+set inccommand=nosplit
 set laststatus=0
 set list listchars+=tab:>-
 set noshowmode
@@ -19,14 +21,19 @@ set termguicolors
 set updatetime=300
 set wildmode=list:longest,full
 
+function! LspStatus() abort
+  let sl = ''
+  if luaeval('not vim.tbl_isempty(vim.lsp.buf_get_clients(0))')
+    let sl.='E:'
+    let sl.='%{luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])")}'
+    let sl.=' W:'
+    let sl.='%{luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")}'
+  else
+    let sl.='off'
+  endif
+  return sl
+endfunction
+
 set rulerformat+=%=                   " Right align
-set rulerformat+=%{coc#status()}      " Coc status
+set rulerformat+=%{LspStatus()}       " Lsp status
 set rulerformat+=%(\ %l,%c%V%)\ %P    " Default~ rulerformat
-
-if has('nvim-0.3.2') || has("patch-8.1.0360")
-  set diffopt=filler,internal,algorithm:histogram,indent-heuristic
-endif
-
-if has('nvim')
-  set inccommand=nosplit
-endif
