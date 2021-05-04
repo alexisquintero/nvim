@@ -2,9 +2,7 @@ lua << EOF
 require'lspconfig'.clojure_lsp.setup{}
 require'lspconfig'.hls.setup{}
 require'lspconfig'.rnix.setup{}
-EOF
 
-lua << EOF
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
