@@ -15,7 +15,7 @@ vim.o.shortmess = string.gsub(vim.o.shortmess, 'F', '') .. 'c'
 
 cmd [[augroup lsp]]
 cmd [[autocmd!]]
-cmd [[autocmd FileType scala setlocal omnifunc=v:lua.vim.lsp.omnifunc]]
+-- cmd [[autocmd FileType scala setlocal omnifunc=v:lua.vim.lsp.omnifunc]]
 cmd [[autocmd FileType scala,sbt lua require("metals").initialize_or_attach(metals_config)]]
 cmd [[augroup end]]
 
