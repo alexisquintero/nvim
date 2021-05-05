@@ -28,6 +28,11 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  buf_set_keymap('n', 'gds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
+  buf_set_keymap('n', 'gws', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', opts)
+  -- Metals
+  buf_set_keymap('n', '<leader>ws', '<cmd>lua require"metals".worksheet_hover()<CR>', opts)
+  buf_set_keymap('n', '<leader>a', '<cmd>lua require"metals".open_all_diagnostics()<CR>', opts)
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
@@ -64,6 +69,7 @@ for _, lsp in ipairs(servers) do
 end
 EOF
 
-highlight link LspReferenceRead IncSearch
-highlight link LspReferenceText IncSearch
-highlight link LspReferenceWrite IncSearch
+highlight link LspReferenceText CursorLine
+" highlight link LspReferenceText CursorColumn
+highlight link LspReferenceRead LspReferenceText
+highlight link LspReferenceWrite LspReferenceText

@@ -1,9 +1,7 @@
 runtime settings.vim
 runtime mappings.vim
 runtime plugins.vim
-" runtime pluginsettings/nord.vim
 
-" colorscheme nord
 colorscheme substrata
 
 runtime pluginsettings/fzf.vim

@@ -12,7 +12,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'romainl/vim-cool'
 Plug 'guns/vim-sexp'
-" Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-sandwich'
@@ -24,4 +23,5 @@ Plug 'arzg/vim-substrata'
 Plug 'neovim/nvim-lspconfig'
 Plug 'scalameta/nvim-metals'
 Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
