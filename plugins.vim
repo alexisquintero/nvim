@@ -23,5 +23,6 @@ Plug 'arzg/vim-substrata'
 Plug 'neovim/nvim-lspconfig'
 Plug 'scalameta/nvim-metals'
 Plug 'hrsh7th/nvim-compe'
+Plug 'milkypostman/vim-togglelist'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
