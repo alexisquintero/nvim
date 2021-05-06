@@ -70,6 +70,5 @@ end
 EOF
 
 highlight link LspReferenceText CursorLine
-" highlight link LspReferenceText CursorColumn
 highlight link LspReferenceRead LspReferenceText
 highlight link LspReferenceWrite LspReferenceText
