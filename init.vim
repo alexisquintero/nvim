@@ -16,4 +16,4 @@ runtime pluginsettings/vim-scala.vim
 runtime pluginsettings/lsp-config.vim
 runtime pluginsettings/metals.vim
 runtime pluginsettings/compe.vim
-" runtime pluginsettings/treesitter.vim
+runtime pluginsettings/treesitter.vim
