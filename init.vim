@@ -4,8 +4,6 @@ runtime plugins.vim
 
 colorscheme substrata
 
-map <leader>t :TSHighlightCapturesUnderCursor<CR>
-
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/gitgutter.vim
 runtime pluginsettings/netrw.vim
@@ -18,4 +16,4 @@ runtime pluginsettings/vim-scala.vim
 runtime pluginsettings/lsp-config.vim
 runtime pluginsettings/metals.vim
 runtime pluginsettings/compe.vim
-runtime pluginsettings/treesitter.vim
+runtime pluginsettings/lsp-signature.vim

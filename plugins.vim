@@ -23,6 +23,5 @@ Plug 'arzg/vim-substrata'
 Plug 'neovim/nvim-lspconfig'
 Plug 'scalameta/nvim-metals'
 Plug 'hrsh7th/nvim-compe'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+Plug 'ray-x/lsp_signature.nvim'
 call plug#end()
