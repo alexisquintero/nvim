@@ -1,5 +1,3 @@
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
-
 nnoremap <C-p> :Files<CR>
 nnoremap <M-p> :Rg<CR>
 nnoremap gb :Buffers<CR>
