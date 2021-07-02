@@ -1,7 +1,4 @@
 lua << EOF
-require'lspconfig'.clojure_lsp.setup{}
-require'lspconfig'.hls.setup{}
-require'lspconfig'.rnix.setup{}
 
 local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
@@ -32,8 +29,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gs', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
   buf_set_keymap('n', 'gws', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', opts)
   -- Metals
-  buf_set_keymap('n', '<leader>ws', '<cmd>lua require"metals".worksheet_hover()<CR>', opts)
-  buf_set_keymap('n', '<leader>a', '<cmd>lua require"metals".open_all_diagnostics()<CR>', opts)
+  -- buf_set_keymap('n', '<leader>ws', '<cmd>lua require"metals".worksheet_hover()<CR>', opts)
+  -- buf_set_keymap('n', '<leader>a', '<cmd>lua require"metals".open_all_diagnostics()<CR>', opts)
 
   -- Set autocommands conditional on server_capabilities
   if client.resolved_capabilities.document_highlight then
@@ -54,11 +51,16 @@ local on_attach = function(client, bufnr)
 
 end
 
--- Use a loop to conveniently both setup defined servers 
--- and map buffer local keybindings when the language server attaches
-local servers = { "clojure_lsp", "hls", "rnix", "metals" }
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { "clojure_lsp", "hls", "rnix" }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup { on_attach = on_attach }
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    }
+  }
 end
 EOF
 
