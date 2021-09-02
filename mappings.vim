@@ -6,7 +6,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <SPACE> <Nop>
+" nnoremap <SPACE> <Nop>
 nnoremap Y y$
 nnoremap [oq :copen<CR>
 nnoremap ]oq :cclose<CR>

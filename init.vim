@@ -15,5 +15,4 @@ runtime pluginsettings/vim-printer.vim
 runtime pluginsettings/vim-scala.vim
 runtime pluginsettings/lsp-config.vim
 runtime pluginsettings/metals.vim
-runtime pluginsettings/compe.vim
-runtime pluginsettings/lsp-signature.vim
+runtime pluginsettings/cmp.vim
