@@ -6,7 +6,9 @@ let g:loaded_node_provider = 0
 
 runtime settings.vim
 runtime mappings.vim
-runtime plugins.vim
+if empty('g:ignore_plug')
+  runtime plugins.vim
+endif
 
 colorscheme substrata
 
