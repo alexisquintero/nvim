@@ -6,7 +6,7 @@ let g:loaded_node_provider = 0
 
 runtime settings.vim
 runtime mappings.vim
-if empty('g:ignore_plug')
+if !exists("g:ignore_plug")
   runtime plugins.vim
 endif
 

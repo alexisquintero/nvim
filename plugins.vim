@@ -26,4 +26,5 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()
