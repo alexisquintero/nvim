@@ -18,7 +18,7 @@ local on_attach = function(_, bufnr)
   lsp_diagnostics()
 end
 
-metals_config = require'metals'.bare_config
+metals_config = require'metals'.bare_config()
 metals_config.settings = {
   showImplicitArguments = true,
 }
