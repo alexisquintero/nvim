@@ -2,9 +2,7 @@ set colorcolumn=120
 set diffopt=filler,internal,algorithm:histogram,indent-heuristic
 set expandtab
 set foldmethod=indent
-set hidden
 set ignorecase
-set inccommand=nosplit
 set laststatus=0
 set list listchars+=tab:>-
 set noshowmode
@@ -23,8 +21,8 @@ set wildmode=list:longest,full
 function! LspStatus() abort
   let sl = ''
   if luaeval('not vim.tbl_isempty(vim.lsp.buf_get_clients(0))')
-    let errors = luaeval("vim.lsp.diagnostic.get_count(0, [[Error]])")
-    let warnings = luaeval("vim.lsp.diagnostic.get_count(0, [[Warning]])")
+    let errors = luaeval("#vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })")
+    let warnings = luaeval("#vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })")
     if (errors > 0)
       let sl.='E:'
       let sl.=errors
