@@ -1,6 +1,5 @@
 set colorcolumn=120
 set diffopt=filler,internal,algorithm:histogram,indent-heuristic
-set expandtab
 set foldmethod=indent
 set ignorecase
 set laststatus=0
@@ -15,7 +14,6 @@ set softtabstop=2
 set splitbelow
 set splitright
 set termguicolors
-set updatetime=300
 set wildmode=list:longest,full
 
 function! LspStatus() abort
