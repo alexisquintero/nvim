@@ -37,7 +37,6 @@ local nvim_lsp = require('lspconfig')
 local on_attach = function(client, bufnr)
   lsp_mappings(bufnr)
   lsp_diagnostics()
-  require'lsp_signature'.on_attach()
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

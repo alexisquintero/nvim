@@ -1,5 +1,6 @@
 set colorcolumn=120
 set diffopt=filler,internal,algorithm:histogram,indent-heuristic
+set expandtab
 set foldmethod=indent
 set ignorecase
 set laststatus=0
