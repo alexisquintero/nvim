@@ -12,6 +12,7 @@ endif
 
 colorscheme substrata
 
+runtime pluginsettings/clojure.vim
 runtime pluginsettings/cmp.vim
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/gitgutter.vim
