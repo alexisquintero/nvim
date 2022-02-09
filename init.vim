@@ -14,6 +14,7 @@ colorscheme substrata
 
 runtime pluginsettings/clojure.vim
 runtime pluginsettings/cmp.vim
+runtime pluginsettings/fidget.vim
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/gitgutter.vim
 runtime pluginsettings/lsp-config.vim
