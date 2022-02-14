@@ -29,4 +29,5 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'tversteeg/registers.nvim'
 Plug 'j-hui/fidget.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 call plug#end()
