@@ -28,4 +28,5 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'tversteeg/registers.nvim'
 Plug 'j-hui/fidget.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()

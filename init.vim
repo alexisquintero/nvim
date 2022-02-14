@@ -23,6 +23,8 @@ runtime pluginsettings/netrw.vim
 runtime pluginsettings/sandwich.vim
 runtime pluginsettings/sexp.vim
 runtime pluginsettings/targets.vim
+
+runtime pluginsettings/treesitter.vim
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/vim-printer.vim
 runtime pluginsettings/vim-scala.vim
