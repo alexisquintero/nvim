@@ -2,7 +2,6 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
-    disable = { "clojure" },
   },
   indent = {
     enable = true
