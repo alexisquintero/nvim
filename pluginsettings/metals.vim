@@ -21,11 +21,10 @@ end
 metals_config = require'metals'.bare_config()
 metals_config.settings = {
   showImplicitArguments = true,
+  useGlobalExecutable = true,
 }
 metals_config.on_attach = on_attach
 EOF
-
-let g:metals_use_global_executable = v:true
 
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
