@@ -6,8 +6,8 @@ let g:loaded_node_provider = 0
 let g:do_filetype_lua = 1
 let g:did_load_filetypes = 0
 
-runtime settings.vim
-runtime mappings.vim
+runtime settings.lua
+runtime mappings.lua
 if !exists("g:ignore_plug")
   runtime plugins.vim
 endif
