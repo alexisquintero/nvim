@@ -1,5 +1,3 @@
-lua << EOF
-
 local cmp = require 'cmp'
 
 cmp.setup {
@@ -31,5 +29,3 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
-EOF

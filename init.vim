@@ -14,20 +14,18 @@ endif
 
 colorscheme substrata
 
-runtime pluginsettings/clojure.vim
-runtime pluginsettings/cmp.vim
-runtime pluginsettings/comment-nvim.vim
-runtime pluginsettings/fidget.vim
+runtime pluginsettings/cmp.lua
+runtime pluginsettings/comment-nvim.lua
+runtime pluginsettings/fidget.lua
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/gitgutter.vim
-runtime pluginsettings/lsp-config.vim
+runtime pluginsettings/lsp-config.lua
 runtime pluginsettings/luasnip.vim
-runtime pluginsettings/metals.vim
+runtime pluginsettings/metals.lua
 runtime pluginsettings/netrw.vim
 runtime pluginsettings/sandwich.vim
 runtime pluginsettings/sexp.vim
 runtime pluginsettings/targets.vim
-runtime pluginsettings/treesitter.vim
+runtime pluginsettings/treesitter.lua
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/vim-printer.vim
-runtime pluginsettings/vim-scala.vim
