@@ -1,32 +1,31 @@
-local opts = { noremap=true, silent=true }
-
-vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>aa', '<cmd>lua vim.diagnostic.setqflist()<CR>', opts) -- all workspace diagnostics
-vim.api.nvim_set_keymap('n', '<leader>ae', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>', opts) -- all workspace errors
-vim.api.nvim_set_keymap('n', '<leader>aw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>', opts) -- all workspace warnings
+nnoremap('<leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
+nnoremap('[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
+nnoremap(']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+nnoremap('<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>')
+nnoremap('<leader>aa', '<cmd>lua vim.diagnostic.setqflist()<CR>') -- all workspace diagnostics
+nnoremap('<leader>ae', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>') -- all workspace errors
+nnoremap('<leader>aw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>') -- all workspace warnings
 
 function lsp_mappings(bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function bufnnoremap (lhs, rhs)
+    _bufnnoremap(bufnr, lhs, rhs)
+  end
 
-  -- TODO: avoid repetition
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>k', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gs', '<cmd>lua vim.lsp.buf.document_symbol()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gws', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', opts)
+  bufnnoremap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+  bufnnoremap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+  bufnnoremap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+  bufnnoremap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+  bufnnoremap('<leader>k', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+  bufnnoremap('<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>')
+  bufnnoremap('<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>')
+  bufnnoremap('<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>')
+  bufnnoremap('<leader>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
+  bufnnoremap('<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+  bufnnoremap('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+  bufnnoremap('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+  bufnnoremap('<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+  bufnnoremap('gs', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
+  bufnnoremap('gws', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>')
 end
 
 function lsp_diagnostics()

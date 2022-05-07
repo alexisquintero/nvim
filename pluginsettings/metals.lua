@@ -1,11 +1,10 @@
 local on_attach = function(_, bufnr)
-  local opts = { noremap=true, silent=true }
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function bufnnoremap (lhs, rhs)
+    _bufnnoremap(bufnr, lhs, rhs)
+  end
 
   lsp_mappings(bufnr)
-
-  buf_set_keymap('n', '<leader>ws', '<cmd>lua require"metals".worksheet_hover()<CR>', opts)
-
+  bufnnoremap('<leader>ws', '<cmd>lua require"metals".worksheet_hover()<CR>')
   lsp_diagnostics()
 end
 
