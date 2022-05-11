@@ -17,7 +17,6 @@ colorscheme substrata
 runtime pluginsettings/cmp.lua
 runtime pluginsettings/comment-nvim.lua
 runtime pluginsettings/fidget.lua
-runtime pluginsettings/fzf.vim
 runtime pluginsettings/gitgutter.vim
 runtime pluginsettings/lsp-config.lua
 runtime pluginsettings/luasnip.lua
@@ -29,3 +28,4 @@ runtime pluginsettings/targets.vim
 runtime pluginsettings/treesitter.lua
 runtime pluginsettings/vim-cool.vim
 runtime pluginsettings/vim-printer.vim
+runtime pluginsettings/telescope.lua
