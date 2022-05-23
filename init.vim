@@ -20,7 +20,7 @@ runtime pluginsettings/fidget.lua
 runtime pluginsettings/fzf.vim
 runtime pluginsettings/gitgutter.vim
 runtime pluginsettings/lsp-config.lua
-runtime pluginsettings/luasnip.vim
+runtime pluginsettings/luasnip.lua
 runtime pluginsettings/metals.lua
 runtime pluginsettings/netrw.vim
 runtime pluginsettings/sandwich.vim
