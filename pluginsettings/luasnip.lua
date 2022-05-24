@@ -35,8 +35,10 @@ end, { silent = true })
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
   if ls.jumpable(-1) then
     ls.jump(-1)
+  else
+    return "<c-j>"
   end
-end, { silent = true })
+end, { silent = true, expr = true })
 
 -- This is useful for choice nodes (introduced in the forthcoming episode 2)
 vim.keymap.set("i", "<c-l>", function()
