@@ -1,6 +1,6 @@
 local on_attach = function(_, bufnr)
   local function bufnnoremap (lhs, rhs)
-    _bufnnoremap(bufnr, lhs, rhs)
+    nnoremap(lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
   end
 
   lsp_mappings(bufnr)

@@ -2,19 +2,15 @@ vim.g.mapleader = " "
 local opts = { noremap=true }
 
 function noremap (lhs, rhs)
-  vim.api.nvim_set_keymap('', lhs, rhs, opts)
+  vim.keymap.set('', lhs, rhs, opts)
 end
 
-function nnoremap (lhs, rhs)
-  vim.api.nvim_set_keymap('n', lhs, rhs, opts)
+function nnoremap (lhs, rhs, _opts)
+  vim.keymap.set('n', lhs, rhs, _opts or opts)
 end
 
 function tnoremap (lhs, rhs)
-  vim.api.nvim_set_keymap('t', lhs, rhs, opts)
-end
-
-function _bufnnoremap (bufnr, lhs, rhs)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', lhs, rhs, { noremap=true, silent=true})
+  vim.keymap.set('t', lhs, rhs, opts)
 end
 
 noremap('F12', '<Esc>:syntax sync fromstart<CR>')
