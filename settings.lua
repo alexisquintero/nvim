@@ -1,21 +1,22 @@
-vim.opt.colorcolumn = '120'
+vim.o.cmdheight = 0
+vim.o.colorcolumn = '120'
 vim.opt.diffopt = { 'filler', 'internal', 'algorithm:histogram', 'indent-heuristic' }
-vim.opt.expandtab = true
-vim.opt.foldmethod = 'indent'
-vim.opt.ignorecase = true
-vim.opt.laststatus = 0
+vim.o.expandtab = true
+vim.o.foldmethod = 'indent'
+vim.o.ignorecase = true
+vim.o.laststatus = 0
 vim.opt.listchars = { tab = '>-', trail = '·'}
-vim.opt.list = true
-vim.opt.showmode = false
-vim.opt.scrolloff = 3
-vim.opt.shiftwidth = 2
-vim.opt.sidescrolloff = 3
-vim.opt.smartcase = true
-vim.opt.softtabstop = 2
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-vim.opt.termguicolors = true
-vim.opt.wildmode = 'list:longest,full'
+vim.o.list = true
+vim.o.showmode = false
+vim.o.scrolloff = 3
+vim.o.shiftwidth = 2
+vim.o.sidescrolloff = 3
+vim.o.smartcase = true
+vim.o.softtabstop = 2
+vim.o.splitbelow = true
+vim.o.splitright = true
+vim.o.termguicolors = true
+vim.o.wildmode = 'list:longest,full'
 
 function _G.lsp_status()
   local sl = ""
@@ -32,5 +33,5 @@ function _G.lsp_status()
   return sl
 end
 
-vim.opt.rulerformat = "%=" .. "%{v:lua.lsp_status()}" .. "%( %l,%c%V%) %P"
---             Right align .. LspStatus               .. Default~ rulerformat
+vim.o.rulerformat = "%=" .. "%{v:lua.lsp_status()}" .. "%( %l,%c%V%) %P"
+--           Right align .. LspStatus               .. Default~ rulerformat
