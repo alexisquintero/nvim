@@ -6,11 +6,11 @@ require('telescope').setup {
         ["<C-m>"] = actions.select_default
       },
     },
+    path_display = { "smart" }
   }
 }
 
 require('telescope').load_extension('fzf')
-
 
 nnoremap('<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>")
 nnoremap('<leader>fg', ":Telescope grep_string search=<CR>")
