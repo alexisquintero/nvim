@@ -23,7 +23,7 @@ function lsp_mappings(bufnr)
   bufnnoremap('<leader>rn', vim.lsp.buf.rename)
   bufnnoremap('<leader>ca', vim.lsp.buf.code_action)
   bufnnoremap('gr', vim.lsp.buf.references)
-  bufnnoremap('<leader>f', vim.lsp.buf.formatting)
+  bufnnoremap('<leader>f', vim.lsp.buf.format)
   bufnnoremap('gs', vim.lsp.buf.document_symbol)
   bufnnoremap('gws', vim.lsp.buf.workspace_symbol)
 end
