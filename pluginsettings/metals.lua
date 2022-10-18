@@ -4,7 +4,7 @@ local on_attach = function(_, bufnr)
   end
 
   lsp_mappings(bufnr)
-  bufnnoremap('<leader>ws', '<cmd>lua require"metals".worksheet_hover()<CR>')
+  bufnnoremap('<leader>ws', '<cmd>lua require"metals".hover_worksheet()<CR>')
   lsp_diagnostics()
 end
 

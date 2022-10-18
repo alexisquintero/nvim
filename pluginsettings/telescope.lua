@@ -6,7 +6,8 @@ require('telescope').setup {
         ["<C-m>"] = actions.select_default
       },
     },
-    path_display = { "smart" }
+    path_display = { "smart" },
+    file_ignore_patterns = { "node_modules/" }
   }
 }
 

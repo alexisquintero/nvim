@@ -44,7 +44,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local servers = { "clojure_lsp", "hls", "rnix", "terraformls", "pyright" }
+local servers = { "clojure_lsp", "hls", "rnix", "terraformls", "pyright", "rust_analyzer" }
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
