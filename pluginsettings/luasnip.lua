@@ -28,8 +28,10 @@ ls.config.set_config {
 vim.keymap.set({ "i", "s" }, "<c-k>", function()
   if ls.expand_or_jumpable() then
     ls.expand_or_jump()
+  else
+    return "<c-k>"
   end
-end, { silent = true })
+end, { silent = true, expr = true })
 
 -- this always moves to the previous item within the snippet
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
@@ -44,5 +46,7 @@ end, { silent = true, expr = true })
 vim.keymap.set("i", "<c-l>", function()
   if ls.choice_active() then
     ls.change_choice(1)
+  else
+    return "<c-l>"
   end
-end)
+end, { expr = true })
