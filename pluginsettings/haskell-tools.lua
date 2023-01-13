@@ -11,7 +11,9 @@ ht.setup {
         nnoremap(lhs, rhs, opts)
       end
 
+      lsp_mappings(bufnr)
       bufnnoremap('<space>hs', ht.hoogle.hoogle_signature)
+      lsp_diagnostics()
     end,
   },
 }
