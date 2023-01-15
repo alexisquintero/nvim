@@ -1,14 +1,13 @@
 metals = require('metals')
 metals_config = metals.bare_config()
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
   local function bufnnoremap (lhs, rhs)
     nnoremap(lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
   end
 
-  lsp_mappings(bufnr)
   bufnnoremap('<leader>ws', metals.hover_worksheet)
-  lsp_diagnostics()
+  on_attach(client, bufnr)
 end
 
 metals_config.settings = {

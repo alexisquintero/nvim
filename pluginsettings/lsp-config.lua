@@ -6,7 +6,7 @@ nnoremap('<leader>aa', vim.diagnostic.setqflist) -- all workspace diagnostics
 nnoremap('<leader>ae', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>') -- all workspace errors
 nnoremap('<leader>aw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>') -- all workspace warnings
 
-function lsp_mappings(bufnr)
+local function lsp_mappings(bufnr)
   local function bufnnoremap (lhs, rhs)
     nnoremap(lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
   end
@@ -29,7 +29,7 @@ function lsp_mappings(bufnr)
   bufnnoremap('gws', vim.lsp.buf.workspace_symbol)
 end
 
-function lsp_diagnostics()
+local function lsp_diagnostics()
   vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
       signs = false,
@@ -37,7 +37,7 @@ function lsp_diagnostics()
   )
 end
 
-local on_attach = function(client, bufnr)
+on_attach = function(client, bufnr)
   lsp_mappings(bufnr)
   lsp_diagnostics()
 end
