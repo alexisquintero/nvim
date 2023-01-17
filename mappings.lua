@@ -28,4 +28,13 @@ nnoremap('[oq', ':copen<CR>')
 nnoremap(']oq', ':cclose<CR>')
 nnoremap('z<C-g>', ":call setreg('+', getreg('%').'#'.line('.'))<CR><C-g>")
 
+-- Diagnostic
+nnoremap('<leader>e', vim.diagnostic.open_float)
+nnoremap('[d', vim.diagnostic.goto_prev)
+nnoremap(']d', vim.diagnostic.goto_next)
+nnoremap('<leader>dl', vim.diagnostic.setloclist)
+nnoremap('<leader>da', vim.diagnostic.setqflist) -- all workspace diagnostics
+nnoremap('<leader>de', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>') -- all workspace errors
+nnoremap('<leader>dw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>') -- all workspace warnings
+
 tnoremap('<leader><Esc>', '<C-\\><C-n>')

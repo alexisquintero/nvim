@@ -1,18 +1,9 @@
-nnoremap('<leader>e', vim.diagnostic.open_float)
-nnoremap('[d', vim.diagnostic.goto_prev)
-nnoremap(']d', vim.diagnostic.goto_next)
-nnoremap('<leader>q', vim.diagnostic.setloclist)
-nnoremap('<leader>aa', vim.diagnostic.setqflist) -- all workspace diagnostics
-nnoremap('<leader>ae', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>') -- all workspace errors
-nnoremap('<leader>aw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>') -- all workspace warnings
-
 local function lsp_mappings(bufnr)
   local function bufnnoremap (lhs, rhs)
     nnoremap(lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
   end
 
   bufnnoremap('gD', vim.lsp.buf.declaration)
-  -- bufnnoremap('gd', vim.lsp.buf.definition)
   bufnnoremap('K', vim.lsp.buf.hover)
   bufnnoremap('gI', vim.lsp.buf.implementation)
   bufnnoremap('<leader>k', vim.lsp.buf.signature_help)
@@ -23,7 +14,6 @@ local function lsp_mappings(bufnr)
   bufnnoremap('<leader>rn', vim.lsp.buf.rename)
   bufnnoremap('<leader>ca', vim.lsp.buf.code_action)
   bufnnoremap('<space>cl', vim.lsp.codelens.run)
-  -- bufnnoremap('gr', vim.lsp.buf.references)
   bufnnoremap('gr', require('telescope.builtin').lsp_references)
   bufnnoremap('<leader>f', vim.lsp.buf.format)
   bufnnoremap('gs', vim.lsp.buf.document_symbol)
