@@ -5,7 +5,7 @@ local function lsp_mappings(bufnr)
 
   bufnnoremap('gD', vim.lsp.buf.declaration)
   bufnnoremap('K', vim.lsp.buf.hover)
-  bufnnoremap('gI', require("telescope.builtin").lsp_implementations)
+  bufnnoremap('gI', require('telescope.builtin').lsp_implementations)
   bufnnoremap('<leader>k', vim.lsp.buf.signature_help)
   bufnnoremap('<leader>wa', vim.lsp.buf.add_workspace_folder)
   bufnnoremap('<leader>wr', vim.lsp.buf.remove_workspace_folder)
@@ -16,7 +16,7 @@ local function lsp_mappings(bufnr)
   bufnnoremap('<space>cl', vim.lsp.codelens.run)
   bufnnoremap('gr', require('telescope.builtin').lsp_references)
   bufnnoremap('<leader>bf', vim.lsp.buf.format)
-  bufnnoremap('<leader>fws' require("telescope.builtin").lsp_dynamic_workspace_symbols)
+  bufnnoremap('<leader>fws', require('telescope.builtin').lsp_dynamic_workspace_symbols)
 end
 
 local function lsp_diagnostics()
