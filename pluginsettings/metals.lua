@@ -7,6 +7,7 @@ local on_attach = function(client, bufnr)
   end
 
   bufnnoremap('<leader>ws', metals.hover_worksheet)
+  bufnnoremap('<leader>fM', require('telescope').extensions.metals.commands)
   on_attach(client, bufnr)
 end
 

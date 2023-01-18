@@ -20,7 +20,7 @@ require('telescope').setup {
 require('telescope').load_extension('fzf')
 require("telescope").load_extension("ui-select")
 
-nnoremap('<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>")
+nnoremap('<leader>ff', require('telescope.builtin').find_files)
 nnoremap('<leader>fg', ":Telescope grep_string search=<CR>")
 nnoremap('<leader>fG', require('telescope.builtin').live_grep)
 nnoremap('<leader>fb', require('telescope.builtin').buffers)
