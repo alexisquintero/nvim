@@ -16,6 +16,7 @@ runtime pluginsettings/comment-nvim.lua
 runtime pluginsettings/fidget.lua
 runtime pluginsettings/gitsigns.lua
 runtime pluginsettings/haskell-tools.lua
+runtime pluginsettings/lsp_signature.vim
 runtime pluginsettings/luasnip.lua
 runtime pluginsettings/metals.lua
 runtime pluginsettings/netrw.vim
