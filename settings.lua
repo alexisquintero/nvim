@@ -1,7 +1,6 @@
 vim.o.cmdheight = 0
 vim.o.colorcolumn = '120'
-vim.opt.diffopt:append { 'algorithm:histogram', 'indent-heuristic' }
--- vim.opt.diffopt:append { 'linematch:60' } -- new diff
+vim.opt.diffopt:append { 'linematch:60' }
 vim.o.expandtab = true
 vim.o.foldmethod = 'indent'
 vim.o.ignorecase = true
