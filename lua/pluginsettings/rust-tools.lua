@@ -7,8 +7,8 @@ rt.setup({
         nnoremap(lhs, rhs, { buffer=bufnr })
       end
 
-      bufnnoremap("<C-space>", rt.hover_actions.hover_actions) -- Hover actions
-      bufnnoremap("<Leader>cag", rt.code_action_group.code_action_group) -- Code action groups
+      bufnnoremap("<Leader>ah", rt.hover_actions.hover_actions) -- Hover actions
+      bufnnoremap("<Leader>ag", rt.code_action_group.code_action_group) -- Code action groups
       on_attach(client, bufnr)
     end,
   },
