@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "santos-gabriel-dario/darcula-solid.nvim",
+  "xiantang/darcula-dark.nvim",
   {
     'glacambre/firenvim',
     -- Lazy load firenvim

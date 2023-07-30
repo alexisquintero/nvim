@@ -1,5 +1,6 @@
 require('pluginsettings/lsp-config') -- Has lsp mappings fn
 
+require('pluginsettings/lazy-nvim')
 require('pluginsettings/cmp')
 require('pluginsettings/comment-nvim')
 require('pluginsettings/fidget')
@@ -16,4 +17,3 @@ require('pluginsettings/telescope')
 require('pluginsettings/treesitter')
 require('pluginsettings/vim-cool')
 require('pluginsettings/vim-printer')
-
