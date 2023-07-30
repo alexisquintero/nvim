@@ -1,6 +1,6 @@
 require('pluginsettings/lsp-config') -- Has lsp mappings fn
 
-require('pluginsettings/lazy-nvim')
+require('pluginsettings/packer')
 require('pluginsettings/cmp')
 require('pluginsettings/comment-nvim')
 require('pluginsettings/fidget')
