@@ -1,9 +1,11 @@
 require('pluginsettings/lsp-config') -- Has lsp mappings fn
 
 require('pluginsettings/packer')
+
 require('pluginsettings/cmp')
 require('pluginsettings/comment-nvim')
 require('pluginsettings/fidget')
+require('pluginsettings/flash')
 require('pluginsettings/gitsigns')
 require('pluginsettings/haskell-tools')
 require('pluginsettings/luasnip')
