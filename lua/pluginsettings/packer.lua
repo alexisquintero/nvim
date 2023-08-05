@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
   }
 
   use 'xiantang/darcula-dark.nvim'
+  use 'calops/hmts.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
