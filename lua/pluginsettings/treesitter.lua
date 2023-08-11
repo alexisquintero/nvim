@@ -19,33 +19,34 @@ require'nvim-treesitter.configs'.setup {
       enable = true,
       lookahead = true,
       keymaps = {
-        ["af"] = { query = "@function.outer", desc = "🌲select around function" },
-        ["if"] = { query = "@function.inner", desc = "🌲select inside function" },
-        ["ac"] = { query = "@class.outer", desc = "🌲select around class" },
-        ["ic"] = { query = "@class.inner", desc = "🌲select inside class" },
-        ["al"] = { query = "@loop.outer", desc = "🌲select around loop" },
-        ["il"] = { query = "@loop.inner", desc = "🌲select inside loop" },
-        ["ab"] = { query = "@block.outer", desc = "🌲select around block" },
-        ["ib"] = { query = "@block.inner", desc = "🌲select inside block" },
+        ["af"] = { query = "@function.outer", desc = "select around function" },
+        ["if"] = { query = "@function.inner", desc = "select inside function" },
+        ["ac"] = { query = "@class.outer", desc = "select around class" },
+        ["ic"] = { query = "@class.inner", desc = "select inside class" },
+        ["al"] = { query = "@loop.outer", desc = "select around loop" },
+        ["il"] = { query = "@loop.inner", desc = "select inside loop" },
+        ["ab"] = { query = "@block.outer", desc = "select around block" },
+        ["ib"] = { query = "@block.inner", desc = "select inside block" },
       },
     },
     move = {
       enable = true,
       set_jumps = true,
       goto_next_start = {
-        ["]m"] = { query = "@function.outer", desc = "🌲go to next function" },
-        ["]C"] = { query = "@class.outer", desc = "🌲go to next class" },
+        ["]m"] = { query = "@function.outer", desc = "go to next function" },
+        ["]]"] = { query = "@class.outer", desc = "go to next class start" }
+      },
+      goto_next_end = {
+        ["]M"] = { query = "@function.outer", desc = "go to next function end" },
+        ["]["] = { query = "@class.outer", desc = "go to next class end" },
       },
       goto_previous_start = {
-        ["[m"] = { query = "@function.outer", desc = "🌲go to previous function" },
-        ["[C"] = { query = "@class.outer", desc = "🌲go to previous class" },
+        ["[m"] = { query = "@function.outer", desc = "go to previous function" },
+        ["[["] = { query = "@class.outer", desc = "go to previous class" },
       },
-    },
-    lsp_interop = {
-      enable = true,
-      peek_definition_code = {
-        ["<leader>pf"] = { query = "@function.outer", desc = "🌲peek function definition" },
-        ["<leader>pc"] = { query = "@class.outer", desc = "🌲peek class definition" },
+      goto_previous_end = {
+        ["[M"] = { query = "@function.outer", desc = "go to previoous function end" },
+        ["[]"] = { query = "@class.outer", desc = "go to previous class end" },
       },
     },
   },
