@@ -13,8 +13,6 @@ function tnoremap (lhs, rhs)
   vim.keymap.set('t', lhs, rhs, opts)
 end
 
-noremap('F12', '<Esc>:syntax sync fromstart<CR>')
-
 nnoremap('<C-[>', '<Esc>')
 nnoremap('<C-h>', '<BS>')
 nnoremap('<C-h>', '<C-w>h')
@@ -27,7 +25,7 @@ nnoremap('<C-w><C-]>', ':horizontal winc ]<CR>')
 nnoremap('<C-w>]', ':vertical winc ]<CR>')
 nnoremap('[oq', ':copen<CR>')
 nnoremap(']oq', ':cclose<CR>')
-nnoremap('z<C-g>', ":call setreg('+', getreg('%').'#'.line('.'))<CR><C-g>")
+nnoremap('z<C-g>', '<cmd>lua vim.fn.setreg("+", string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), ""))<CR>')
 
 -- Diagnostic
 nnoremap('<leader>e', vim.diagnostic.open_float)

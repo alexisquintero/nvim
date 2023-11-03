@@ -12,8 +12,14 @@ require('telescope').setup {
         end,
       },
     },
-    path_display = { "smart" },
-    file_ignore_patterns = { "node_modules/" }
+    layout_strategy = 'vertical',
+    layout_config = {
+      width = 0.95,
+      height = 0.95,
+      mirror = true,
+      prompt_position = 'top',
+      preview_height = 0.7,
+    },
   }
 }
 
