@@ -14,13 +14,21 @@ require('telescope').setup {
     },
     layout_strategy = 'vertical',
     layout_config = {
-      width = 0.95,
-      height = 0.95,
-      mirror = true,
-      prompt_position = 'top',
-      preview_height = 0.7,
+      vertical = {
+        width = 0.95,
+        height = 0.95,
+        mirror = true,
+        prompt_position = 'top',
+        preview_height = 0.7,
+      }
     },
-  }
+  },
+  pickers = {
+    lsp_references = {
+      fname_width = 300,
+      trim_text = true,
+    },
+  },
 }
 
 require('telescope').load_extension('fzf')
