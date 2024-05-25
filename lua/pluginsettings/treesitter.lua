@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  requires = {
+  dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects'
   },
   build = ":TSUpdate",
