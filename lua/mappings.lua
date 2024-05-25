@@ -37,3 +37,31 @@ nnoremap('<leader>de', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>'
 nnoremap('<leader>dw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>') -- all workspace warnings
 
 tnoremap('<leader><Esc>', '<C-\\><C-n>')
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local bufnr = args.buf
+
+    local function lsp_mappings(bufnr)
+      local function bufnnoremap (lhs, rhs)
+        nnoremap(lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
+      end
+
+      bufnnoremap('gD', vim.lsp.buf.declaration)
+      bufnnoremap('gI', require('telescope.builtin').lsp_implementations)
+      bufnnoremap('<leader>k', vim.lsp.buf.signature_help)
+      bufnnoremap('<leader>wa', vim.lsp.buf.add_workspace_folder)
+      bufnnoremap('<leader>wr', vim.lsp.buf.remove_workspace_folder)
+      bufnnoremap('<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>')
+      bufnnoremap('<leader>D', vim.lsp.buf.type_definition)
+      bufnnoremap('<leader>rn', vim.lsp.buf.rename)
+      bufnnoremap('<leader>ca', vim.lsp.buf.code_action)
+      bufnnoremap('<space>cl', vim.lsp.codelens.run)
+      bufnnoremap('gr', require('telescope.builtin').lsp_references)
+      bufnnoremap('<leader>bf', vim.lsp.buf.format)
+      bufnnoremap('<leader>fws', require('telescope.builtin').lsp_dynamic_workspace_symbols)
+    end
+
+    lsp_mappings(bufnr)
+  end,
+})

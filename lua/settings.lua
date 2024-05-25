@@ -37,3 +37,9 @@ end
 
 vim.o.rulerformat = "%=" .. "%{v:lua.lsp_status()}" .. "%( %l,%c%V%) %P"
 --           Right align .. LspStatus               .. Default~ rulerformat
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    signs = false,
+  }
+)

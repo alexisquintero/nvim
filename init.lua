@@ -7,6 +7,21 @@ vim.g.loaded_node_provider = 0
 require('settings')
 require('mappings')
 
-vim.cmd.colorscheme('substrata')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fnzy.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-require('pluginsettings')
+require("lazy").setup("pluginsettings")
+
+vim.g.netrw_banner = 0
+-- vim.g.netrw_list_hide = vim.cmd [[ netrw_gitignore#Hide() . '\(^\|\s\s\)\zs\.\S\+' ]]
+vim.g.netrw_list_hide = (vim.fn["netrw_gitignore#Hide"]()) .. [[,\(^\|\s\s\)\zs\.\S\+]]
