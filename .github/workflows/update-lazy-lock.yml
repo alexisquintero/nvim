@@ -1,0 +1,32 @@
+name: update-lazy-lock
+on:
+  workflow_dispatch: # allows manual triggering
+  # schedule:
+  #   - cron: '0 9 20 * *'
+
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.6
+
+      - name: Installs nvim
+        run: |
+          apt -q update
+          apt install -qy wget cmake
+          adduser $USER fuse
+          wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -O $PWD/nvim
+          chmod +x nvim
+
+      - name: Update lazy lock file
+        run: # Might be better to build from source...
+          ./nvim --appimage-extract-and-run --headless "+Lazy! sync" +qa # Fails
+          # /tmp/appimage_extracted_dc94019d6624a61542792a124d2d2484/usr/bin/nvim: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found (required by /tmp/appimage_extracted_dc94019d6624a61542792a124d2d2484/usr/bin/nvim)
+          # ./nvim --headless "+Lazy! sync" +qa # can't run the app image in docker apparently
+
+      - name: Create pr
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update lazy lock file
+          create_branch: true
