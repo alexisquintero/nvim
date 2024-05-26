@@ -24,11 +24,11 @@ jobs:
 
       - name: Update lazy lock file
         run: | # still doesn't work ...
-          # nix shell --verbose nixpkgs#neovim
           nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-          # nix-channel --update
+          nix-channel --update
           nix-channel --list
-          nix-shell -p neovim cmake
+          nix-shell -p neovim cmake gcc
+          # nix shell nixpkgs#{neovim,cmake,gcc}
           nvim --version
           nvim --headless "+Lazy! sync" +qa
 
