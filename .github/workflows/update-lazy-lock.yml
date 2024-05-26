@@ -14,23 +14,10 @@ jobs:
       - name: Install Nix
         uses: cachix/install-nix-action@v27
 
-      # - name: Installs nvim
-      #   run: |
-      #     apt -q update
-      #     apt install -qy wget cmake
-      #     adduser $USER fuse
-      #     wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage -O $PWD/nvim
-      #     chmod +x nvim
-
       - name: Update lazy lock file
-        run: | # still doesn't work ...
-          nix-channel --add https://nixos.org/channels/nixpkgs-unstable
-          nix-channel --update
-          nix-channel --list
-          nix-shell -p neovim cmake gcc --run 'nvim --headless "+Lazy! sync" +qa'
-          # nix shell nixpkgs#{neovim,cmake,gcc}
-          # nvim --version
-          # nvim --headless "+Lazy! sync" +qa
+        run: | # Not an editor command... no time to bootstrap?
+          nix shell nixpkgs#{neovim,cmake,gcc} --command nvim +qa
+          nix shell nixpkgs#{neovim,cmake,gcc} --command nvim --headless "+Lazy! sync" +qa
 
       - name: Create pr
         uses: stefanzweifel/git-auto-commit-action@v5
