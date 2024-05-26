@@ -14,7 +14,6 @@ vim.o.smartcase = true
 vim.o.softtabstop = 2
 vim.o.splitbelow = true
 vim.o.splitright = true
-vim.o.termguicolors = true
 vim.o.wildmode = 'list:longest,full'
 
 -- disable semantic highlighting for the time being

@@ -25,16 +25,15 @@ nnoremap('<C-w><C-]>', ':horizontal winc ]<CR>')
 nnoremap('<C-w>]', ':vertical winc ]<CR>')
 nnoremap('[oq', ':copen<CR>')
 nnoremap(']oq', ':cclose<CR>')
-nnoremap('z<C-g>', '<cmd>lua vim.fn.setreg("+", string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), ""))<CR>')
+nnoremap('z<C-g>', vim.fn.setreg("+", string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), "")))
+
+nnoremap('<leader>il', vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()))
 
 -- Diagnostic
-nnoremap('<leader>e', vim.diagnostic.open_float)
-nnoremap('[d', vim.diagnostic.goto_prev)
-nnoremap(']d', vim.diagnostic.goto_next)
 nnoremap('<leader>dl', vim.diagnostic.setloclist)
 nnoremap('<leader>da', vim.diagnostic.setqflist) -- all workspace diagnostics
-nnoremap('<leader>de', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>') -- all workspace errors
-nnoremap('<leader>dw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>') -- all workspace warnings
+nnoremap('<leader>de', vim.diagnostic.setqflist({severity = "E"})) -- all workspace errors
+nnoremap('<leader>dw', vim.diagnostic.setqflist({severity = "W"})) -- all workspace warnings
 
 tnoremap('<leader><Esc>', '<C-\\><C-n>')
 
