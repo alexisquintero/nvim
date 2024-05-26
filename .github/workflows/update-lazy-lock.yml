@@ -27,10 +27,10 @@ jobs:
           nix-channel --add https://nixos.org/channels/nixpkgs-unstable
           nix-channel --update
           nix-channel --list
-          nix-shell -p neovim cmake gcc
+          nix-shell -p neovim cmake gcc --run 'nvim --headless "+Lazy! sync" +qa'
           # nix shell nixpkgs#{neovim,cmake,gcc}
-          nvim --version
-          nvim --headless "+Lazy! sync" +qa
+          # nvim --version
+          # nvim --headless "+Lazy! sync" +qa
 
       - name: Create pr
         uses: stefanzweifel/git-auto-commit-action@v5
