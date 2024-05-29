@@ -24,12 +24,30 @@ return {
           behavior = cmp.ConfirmBehavior.Replace,
           select = true,
         }),
+        ['<Tab>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then 
+            cmp.select_next_item()
+          elseif vim.snippet.jumpable(1) then
+            vim.snippet.jump(1)
+          else
+            fallback()
+          end
+        end, { 'i', 's' }),
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then 
+            cmp.select_next_item()
+          elseif vim.snippet.jumpable(-1) then
+            vim.snippet.jump(-1)
+          else
+            fallback()
+          end
+        end, { 'i', 's' }),
       },
-      -- snippet = {
-      --   expand = function(args)
-      --     require'luasnip'.lsp_expand(args.body)
-      --   end
-      -- },
+      snippet = {
+        expand = function(args)
+          vim.snippet.expand(args.body)
+        end
+      },
       sources = {
         -- { name = 'luasnip' },
         { name = 'nvim_lsp' },
@@ -39,6 +57,7 @@ return {
       experimental = {
         ghost_text = true,
       },
+      preselect = cmp.PreselectMode.None,
       comparators = {
         cmp.config.compare.offset,
         cmp.config.compare.kind,

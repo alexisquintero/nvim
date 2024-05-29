@@ -17,10 +17,8 @@ return {
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<S-CR>",
-          node_incremental = "<CR>",
-          scope_incremental = "<S-CR>",
-          node_decremental = "<BS>",
+          node_incremental = "v",
+          node_decremental = "V",
         },
       },
       textobjects = { -- https://github.com/gennaro-tedesco/dotfiles/blob/b18fd749d6eb17fc4a57ea09cb074b9a203b1e28/nvim/lua/plugins/treesitter.lua#L25-L64
