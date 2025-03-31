@@ -23,8 +23,6 @@ return {
       showInferredType = true,
     }
 
-    metals_config.capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
     metals_config.init_options.statusBarProvider = "off"
 
     return metals_config
@@ -41,19 +39,3 @@ return {
     })
   end
 }
-
--- local on_attach = function(client, bufnr)
---   local function bufnnoremap (lhs, rhs)
---     nnoremap(lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
---   end
---
---   bufnnoremap('<leader>ws', metals.hover_worksheet)
---   bufnnoremap('<leader>fM', require('telescope').extensions.metals.commands)
---   on_attach(client, bufnr)
--- end
---
--- metals_config.on_attach = on_attach
---
--- local capabilities = vim.lsp.protocol.make_client_capabilities()
---
--- vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }

@@ -47,16 +47,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
       end
 
       bufnnoremap('gD', vim.lsp.buf.declaration)
-      bufnnoremap('gI', require('telescope.builtin').lsp_implementations)
-      bufnnoremap('<leader>k', vim.lsp.buf.signature_help)
+      bufnnoremap('gri', require('telescope.builtin').lsp_implementations)
       bufnnoremap('<leader>wa', vim.lsp.buf.add_workspace_folder)
       bufnnoremap('<leader>wr', vim.lsp.buf.remove_workspace_folder)
       bufnnoremap('<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>')
       bufnnoremap('<leader>D', vim.lsp.buf.type_definition)
-      bufnnoremap('<leader>rn', vim.lsp.buf.rename)
-      bufnnoremap('<leader>ca', vim.lsp.buf.code_action)
       bufnnoremap('<space>cl', vim.lsp.codelens.run)
-      bufnnoremap('gr', require('telescope.builtin').lsp_references)
+      bufnnoremap('grr', require('telescope.builtin').lsp_references)
       bufnnoremap('<leader>bf', vim.lsp.buf.format)
       bufnnoremap('<leader>fws', require('telescope.builtin').lsp_dynamic_workspace_symbols)
     end
@@ -64,3 +61,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
     lsp_mappings(bufnr)
   end,
 })
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client:supports_method('textDocument/completion') then
+      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+  end,
+})
+vim.opt_global.completeopt = { "menu", "noinsert", "noselect" }
+

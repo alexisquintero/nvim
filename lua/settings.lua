@@ -16,6 +16,16 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.wildmode = 'list:longest,full'
 
+vim.diagnostic.config(
+  {
+    virtual_text = true,
+    virtual_lines = {
+      current_line = true,
+    },
+    signs = false,
+  }
+)
+
 -- disable semantic highlighting for the time being
 vim.api.nvim_create_autocmd("LspAttach", { callback = function(args) local client = vim.lsp.get_client_by_id(args.data.client_id) client.server_capabilities.semanticTokensProvider = nil end, })
 
@@ -36,9 +46,3 @@ end
 
 vim.o.rulerformat = "%=" .. "%{v:lua.lsp_status()}" .. "%( %l,%c%V%) %P"
 --           Right align .. LspStatus               .. Default~ rulerformat
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    signs = false,
-  }
-)
