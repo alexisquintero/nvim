@@ -15,13 +15,11 @@ vim.o.softtabstop = 2
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.wildmode = 'list:longest,full'
+vim.o.winborder = "rounded"
 
 vim.diagnostic.config(
   {
     virtual_text = true,
-    virtual_lines = {
-      current_line = true,
-    },
     signs = false,
   }
 )
