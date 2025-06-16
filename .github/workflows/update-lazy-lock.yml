@@ -20,7 +20,7 @@ jobs:
           nix shell nixpkgs#{neovim,cmake,gcc} --command nvim --headless "+Lazy! sync" +qa
 
       - name: Create pr
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: Update lazy lock file
           create_branch: true
