@@ -1,3 +1,6 @@
+-- require("dapui").open()
+-- require("dapui").close()
+-- require("dapui").toggle()
 return {
   'rcarriga/nvim-dap-ui',
   dependencies = {
