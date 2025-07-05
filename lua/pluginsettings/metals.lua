@@ -7,7 +7,9 @@ return {
 
   opts = function()
     local metals_config = require("metals").bare_config()
-    metals_config.on_attach = function(client, bufnr)
+    metals_config.on_attach = function(_, bufnr)
+      require("metals").setup_dap()
+
       local function bufnnoremap (lhs, rhs)
         nnoremap(lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
       end
