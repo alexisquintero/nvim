@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd("LspAttach", { callback = function(args) local clien
 
 function _G.lsp_status()
   local sl = ""
-  if not vim.tbl_isempty(vim.lsp.buf_get_clients(0)) then
+  if not vim.tbl_isempty(vim.lsp.get_clients({ bufnr = 0 })) then
     local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
     local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
     if errors > 0 then
