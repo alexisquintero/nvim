@@ -14,7 +14,6 @@ function tnoremap (lhs, rhs)
 end
 
 nnoremap('<C-[>', '<Esc>')
-nnoremap('<C-h>', '<BS>')
 nnoremap('<C-h>', '<C-w>h')
 nnoremap('<C-i>', '<Tab>')
 nnoremap('<C-j>', '<C-w>j')
