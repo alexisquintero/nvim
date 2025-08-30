@@ -1,7 +1,7 @@
 return {
   "scalameta/nvim-metals", -- TODO: set up the other mappings, probably different on lsp_config
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    "nvim-lua/plenary.nvim", -- TODO: remove after updating
   },
   ft = { "scala", "sbt", "java" },
 
