@@ -13,13 +13,10 @@ function tnoremap (lhs, rhs)
   vim.keymap.set('t', lhs, rhs, opts)
 end
 
-nnoremap('<C-[>', '<Esc>')
 nnoremap('<C-h>', '<C-w>h')
-nnoremap('<C-i>', '<Tab>')
 nnoremap('<C-j>', '<C-w>j')
 nnoremap('<C-k>', '<C-w>k')
 nnoremap('<C-l>', '<C-w>l')
-nnoremap('<C-m>', '<CR>')
 nnoremap('<C-w><C-]>', ':horizontal winc ]<CR>')
 nnoremap('<C-w>]', ':vertical winc ]<CR>')
 nnoremap('[oq', ':copen<CR>')
