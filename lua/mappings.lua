@@ -22,6 +22,7 @@ nnoremap('<C-w>]', ':vertical winc ]<CR>')
 nnoremap('[oq', ':copen<CR>')
 nnoremap(']oq', ':cclose<CR>')
 nnoremap('z<C-g>', '<cmd>lua vim.fn.setreg("+", string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), ""))<CR>')
+nnoremap('yow', ':set wrap!<CR>')
 
 nnoremap('<leader>il', '<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>')
 
