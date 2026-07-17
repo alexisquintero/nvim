@@ -6,5 +6,8 @@ return {
     'nvim-treesitter/nvim-treesitter-textobjects',
     'nvim-treesitter/nvim-treesitter-context',
   },
-  build = ":TSUpdate"
+  build = function()
+    local ts = require("nvim-treesitter")
+    ts.install(ts.get_available())
+  end
 }
