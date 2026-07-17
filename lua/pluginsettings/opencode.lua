@@ -1,16 +1,26 @@
+-- Default keymaps (prefix <leader>o):
+--   <leader>og  toggle opencode window (open/close)
+--   <leader>oy  add visual selection to context (visual mode)
+--   <leader>oi  open input window (current session)
+--   <leader>oo  open output window
+--   <leader>o/  quick chat with selection/current line
+--   <C-c>       cancel a running request (in opencode window)
 return {
-  "nickjvandyke/opencode.nvim",
-  version = "*", -- Latest stable release
+  "sudo-tee/opencode.nvim",
   config = function()
-    -- Recommended/example keymaps
-    vim.keymap.set({ "n", "x" }, "<leader>oa", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "Ask opencode…" })
-    vim.keymap.set({ "n", "x" }, "<leader>ox", function() require("opencode").select() end,                          { desc = "Execute opencode action…" })
-    vim.keymap.set({ "n", "t" }, "<leader>oo", function() require("opencode").toggle() end,                          { desc = "Toggle opencode" })
-
-    vim.keymap.set({ "n", "x" }, "go",  function() return require("opencode").operator("@this ") end,        { desc = "Add range to opencode", expr = true })
-    vim.keymap.set("n",          "goo", function() return require("opencode").operator("@this ") .. "_" end, { desc = "Add line to opencode", expr = true })
-
-    vim.keymap.set("n", "<S-C-u>", function() require("opencode").command("session.half.page.up") end,   { desc = "Scroll opencode up" })
-    vim.keymap.set("n", "<S-C-d>", function() require("opencode").command("session.half.page.down") end, { desc = "Scroll opencode down" })
+    require("opencode").setup({
+      preferred_picker = "telescope",
+    })
   end,
+  dependencies = {
+    {
+      "MeanderingProgrammer/render-markdown.nvim",
+      opts = {
+        anti_conceal = { enabled = false },
+        file_types = { "markdown", "opencode_output" },
+      },
+      ft = { "markdown", "opencode_output" },
+    },
+    "nvim-telescope/telescope.nvim",
+  },
 }
