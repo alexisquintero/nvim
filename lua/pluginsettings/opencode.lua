@@ -13,14 +13,7 @@ return {
     })
   end,
   dependencies = {
-    {
-      "MeanderingProgrammer/render-markdown.nvim",
-      opts = {
-        anti_conceal = { enabled = false },
-        file_types = { "markdown", "opencode_output" },
-      },
-      ft = { "markdown", "opencode_output" },
-    },
+    "OXY2DEV/markview.nvim",
     "nvim-telescope/telescope.nvim",
   },
 }
