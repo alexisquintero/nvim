@@ -17,6 +17,8 @@ vim.o.splitright = true
 vim.o.wildmode = 'list:longest,full'
 vim.o.winborder = "rounded"
 
+require('ruler')
+
 vim.diagnostic.config(
   {
     virtual_text = true,
