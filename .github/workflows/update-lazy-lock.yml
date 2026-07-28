@@ -1,8 +1,12 @@
 name: update-lazy-lock
 on:
-  workflow_dispatch: # allows manual triggering
-  # schedule:
-  #   - cron: '0 9 20 * *'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 19 * *'
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   lockfile:
@@ -15,12 +19,35 @@ jobs:
         uses: cachix/install-nix-action@v31
 
       - name: Update lazy lock file
-        run: | # Not an editor command... no time to bootstrap?
-          nix shell nixpkgs#{neovim,cmake,gcc} --command nvim +qa
-          nix shell nixpkgs#{neovim,cmake,gcc} --command nvim --headless "+Lazy! sync" +qa
+        run: |
+          nix shell nixpkgs#{neovim,cmake,gcc,git} --command \
+            nvim --headless "+Lazy! sync" "+qa"
 
-      - name: Create pr
-        uses: stefanzweifel/git-auto-commit-action@v7
+      - name: Smoke test
+        run: |
+          output=$(nix shell nixpkgs#{neovim,cmake,gcc,git} --command nvim --headless "+qa" 2>&1)
+          if echo "$output" | grep -qE "Error detected|stack traceback"; then
+            echo "Startup errors detected:"
+            echo "$output"
+            exit 1
+          fi
+
+      - name: Commit updated lock file
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v7.2.0
         with:
           commit_message: Update lazy lock file
+          branch: update/lazy-lock
           create_branch: true
+
+      - name: Create PR
+        if: steps.commit.outputs.changes_detected == 'true'
+        run: |
+          gh pr create \
+            --title "Update lazy lock file" \
+            --body "Automated plugin update via \`Lazy sync\`" \
+            --base main \
+            --head update/lazy-lock \
+          || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
