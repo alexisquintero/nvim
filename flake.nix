@@ -42,7 +42,11 @@
               config_parent=$(mktemp -d)
               trap 'rm -rf "$config_parent"' EXIT
               ln -s ${self} "$config_parent/nvim-flake"
-              NVIM_APPNAME=nvim-flake XDG_CONFIG_HOME="$config_parent" exec nvim "$@"
+              NVIM_APPNAME=nvim-flake \
+                XDG_CONFIG_HOME="$config_parent" \
+                XDG_DATA_HOME="$config_parent/data" \
+                XDG_STATE_HOME="$config_parent/state" \
+                exec nvim "$@"
             '';
           };
         });
