@@ -1,6 +1,7 @@
 require('vim._core.ui2').enable()
 
-local buf, win
+local buf = -1
+local win = -1
 
 local function ruler_text()
   local fmt = vim.o.rulerformat:gsub('%%=', '')
