@@ -22,7 +22,7 @@
 
       deps = pkgs: with pkgs; [
         nixd
-        cmake
+        gnumake
         gcc
         lua-language-server
         imagemagick

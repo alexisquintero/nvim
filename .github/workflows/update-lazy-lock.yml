@@ -20,12 +20,12 @@ jobs:
 
       - name: Update lazy lock file
         run: |
-          nix shell nixpkgs#{neovim,cmake,gcc,git} --command \
+          nix shell nixpkgs#{neovim,gnumake,gcc,git} --command \
             nvim --headless "+Lazy! sync" "+qa"
 
       - name: Smoke test
         run: |
-          output=$(nix shell nixpkgs#{neovim,cmake,gcc,git} --command nvim --headless "+qa" 2>&1)
+          output=$(nix shell nixpkgs#{neovim,gnumake,gcc,git} --command nvim --headless "+qa" 2>&1)
           if echo "$output" | grep -qE "Error detected|stack traceback"; then
             echo "Startup errors detected:"
             echo "$output"
