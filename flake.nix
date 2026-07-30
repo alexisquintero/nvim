@@ -63,7 +63,7 @@
         programs.neovim = {
           enable = true;
           extraPackages = deps pkgs;
-          extraLuaConfig = ''
+          initLua = ''
             vim.g.skk_jisyo = "${skkJisyo pkgs}"
           '';
           vimAlias = true;
