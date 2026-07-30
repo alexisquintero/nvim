@@ -24,11 +24,14 @@
         nixd
         gnumake
         gcc
+        deno
         lua-language-server
         imagemagick
         curl
         tree-sitter
       ];
+
+      skkJisyo = pkgs: "${pkgs.libskk}/share/skk/SKK-JISYO.L";
     in
     {
       packages = forAllSystems (system:
@@ -46,7 +49,7 @@
                 XDG_CONFIG_HOME="$config_parent" \
                 XDG_DATA_HOME="$config_parent/data" \
                 XDG_STATE_HOME="$config_parent/state" \
-                exec nvim "$@"
+                exec nvim --cmd "lua vim.g.skk_jisyo='${skkJisyo pkgs}'" "$@"
             '';
           };
         });
@@ -60,6 +63,9 @@
         programs.neovim = {
           enable = true;
           extraPackages = deps pkgs;
+          extraLuaConfig = ''
+            vim.g.skk_jisyo = "${skkJisyo pkgs}"
+          '';
           vimAlias = true;
           vimdiffAlias = true;
         };
