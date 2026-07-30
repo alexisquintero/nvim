@@ -37,13 +37,15 @@ local function init()
 end
 
 local function update()
-  if not (vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_win_is_valid(win)) then
-    init()
-    return
-  end
-  local text = ruler_text()
-  vim.api.nvim_buf_set_lines(buf, 0, -1, false, { text })
-  vim.api.nvim_win_set_config(win, { width = math.max(1, #text) })
+  vim.schedule(function()
+    if not (vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_win_is_valid(win)) then
+      init()
+      return
+    end
+    local text = ruler_text()
+    vim.api.nvim_buf_set_lines(buf, 0, -1, false, { text })
+    vim.api.nvim_win_set_config(win, { width = math.max(1, #text) })
+  end)
 end
 
 local function reposition()
