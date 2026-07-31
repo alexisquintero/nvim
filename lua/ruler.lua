@@ -1,5 +1,3 @@
-require('vim._core.ui2').enable()
-
 local buf = -1
 local win = -1
 
