@@ -23,12 +23,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("pluginsettings")
 
-vim.api.nvim_create_autocmd('User', {
-  pattern = 'LazyDone',
-  once = true,
-  callback = function() vim.cmd('restart') end,
-})
-
 vim.g.netrw_banner = 0
 -- vim.g.netrw_list_hide = vim.cmd [[ netrw_gitignore#Hide() . '\(^\|\s\s\)\zs\.\S\+' ]]
 vim.g.netrw_list_hide = (vim.fn["netrw_gitignore#Hide"]()) .. [[,\(^\|\s\s\)\zs\.\S\+]]
