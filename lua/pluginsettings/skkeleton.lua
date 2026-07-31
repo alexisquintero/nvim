@@ -4,7 +4,7 @@ return {
   config = function()
     vim.keymap.set({ 'i', 'c' }, '<C-j>', '<Plug>(skkeleton-toggle)')
     vim.fn['skkeleton#config']({
-      globalJisyo = vim.g.skk_jisyo,
+      globalDictionaries = { { vim.g.skk_jisyo, 'euc-jp' } },
     })
   end,
 }

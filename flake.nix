@@ -60,12 +60,13 @@
           source = self;
         };
 
+        xdg.configFile."nvim/lua/nix_config.lua".text = ''
+          vim.g.skk_jisyo = "${skkJisyo pkgs}"
+        '';
+
         programs.neovim = {
           enable = true;
           extraPackages = deps pkgs;
-          initLua = ''
-            vim.g.skk_jisyo = "${skkJisyo pkgs}"
-          '';
           vimAlias = true;
           vimdiffAlias = true;
         };
