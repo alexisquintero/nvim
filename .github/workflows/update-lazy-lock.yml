@@ -18,6 +18,11 @@ jobs:
       - name: Install Nix
         uses: cachix/install-nix-action@v31
 
+      - name: Setup nvim config
+        run: |
+          mkdir -p ~/.config
+          ln -s $GITHUB_WORKSPACE ~/.config/nvim
+
       - name: Update lazy lock file
         run: |
           nix shell nixpkgs#{neovim,gnumake,gcc,git} --command \
