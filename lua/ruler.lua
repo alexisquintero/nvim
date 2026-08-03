@@ -34,6 +34,12 @@ local function init()
   vim.wo[win].winhighlight = 'Normal:MsgArea'
 end
 
+local function should_hide(text)
+  local ruler_row = vim.o.lines - vim.o.cmdheight - (vim.o.laststatus > 0 and 1 or 0)
+  local ruler_col = vim.o.columns - #text
+  return vim.fn.screenrow() == ruler_row and vim.fn.screencol() > ruler_col
+end
+
 local function update()
   vim.schedule(function()
     if not (vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_win_is_valid(win)) then
@@ -41,8 +47,9 @@ local function update()
       return
     end
     local text = ruler_text()
+    local hide = should_hide(text)
     vim.api.nvim_buf_set_lines(buf, 0, -1, false, { text })
-    vim.api.nvim_win_set_config(win, { width = math.max(1, #text) })
+    vim.api.nvim_win_set_config(win, { hide = hide, width = math.max(1, #text) })
   end)
 end
 

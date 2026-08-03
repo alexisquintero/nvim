@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7.0.1
+        with:
+          ref: master
 
       - name: Install Nix
         uses: cachix/install-nix-action@v31
@@ -51,8 +53,8 @@ jobs:
           gh pr create \
             --title "Update lazy lock file" \
             --body "Automated plugin update via \`Lazy sync\`" \
-            --base main \
+            --base master \
             --head update/lazy-lock \
-          || true
+          || gh pr view update/lazy-lock --json url -q .url
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
