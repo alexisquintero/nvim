@@ -1,6 +1,7 @@
 return {
   "scalameta/nvim-metals", -- TODO: set up the other mappings, probably different on lsp_config
   ft = { "scala", "sbt", "java" },
+  cond = function() return vim.fn.executable('metals') == 1 end,
 
   opts = function()
     local metals_config = require("metals").bare_config()

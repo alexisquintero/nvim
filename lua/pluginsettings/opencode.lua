@@ -7,6 +7,7 @@
 --   <C-c>       cancel a running request (in opencode window)
 return {
   "sudo-tee/opencode.nvim",
+  cond = function() return vim.fn.executable('opencode') == 1 end,
   config = function()
     require("opencode").setup({
       preferred_picker = "telescope",
