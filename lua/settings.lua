@@ -29,20 +29,5 @@ vim.diagnostic.config(
 -- disable semantic highlighting for the time being
 vim.api.nvim_create_autocmd("LspAttach", { callback = function(args) local client = vim.lsp.get_client_by_id(args.data.client_id) client.server_capabilities.semanticTokensProvider = nil end, })
 
-function _G.lsp_status()
-  local sl = ""
-  if not vim.tbl_isempty(vim.lsp.get_clients({ bufnr = 0 })) then
-    local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
-    local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
-    if errors > 0 then
-      sl = sl .. "E:" .. errors
-    end
-    if warnings > 0 then
-      sl = sl .. " W:" .. warnings
-    end
-  end
-  return sl
-end
-
-vim.o.rulerformat = "%=" .. "%{v:lua.lsp_status()}" .. "%( %l,%c%V%) %P"
---           Right align .. LspStatus               .. Default~ rulerformat
+vim.o.rulerformat = "%=" .. "%(%{v:lua.vim.diagnostic.status()} %)" .. "%( %l,%c%V%) %P"
+--           Right align .. DiagnosticStatus                        .. Default rulerformat
