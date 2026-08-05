@@ -31,7 +31,7 @@
         tree-sitter
       ];
 
-      skkJisyo = pkgs: "${pkgs.libskk}/share/skk/SKK-JISYO.L";
+      skkJisyo = pkgs: "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L";
     in
     {
       packages = forAllSystems (system:
