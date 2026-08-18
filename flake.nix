@@ -69,6 +69,9 @@
           extraPackages = deps pkgs;
           vimAlias = true;
           vimdiffAlias = true;
+          withRuby = false;
+          withPython3 = false;
+          withNodeJs = false;
         };
       };
     };
