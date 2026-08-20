@@ -10,6 +10,8 @@ return {
         condition = function(buffer)
           return ({ opencode_output = true })[vim.bo[buffer].filetype]
         end,
+        hybrid_modes = { "n", "v" },
+        linewise_hybrid_mode = true,
       },
     })
   end,
