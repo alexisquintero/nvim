@@ -26,5 +26,10 @@ return {
     vim.keymap.set({ "n", "x", "o" }, "[m", function() mov.goto_previous_start("@function.outer", "textobjects") end, { desc = "go to previous function" })
     vim.keymap.set({ "n", "x", "o" }, "]]", function() mov.goto_next_start("@class.outer", "textobjects") end, { desc = "go to next class" })
     vim.keymap.set({ "n", "x", "o" }, "[[", function() mov.goto_previous_start("@class.outer", "textobjects") end, { desc = "go to previous class" })
+
+    -- iF/aF: inside/around Fenced code blocks (markdown)
+    vim.keymap.set({ "x", "o" }, "iF", function() sel.select_textobject("@code.inner", "textobjects") end, { desc = "select inside Fenced block" })
+    vim.keymap.set({ "x", "o" }, "aF", function() sel.select_textobject("@code.outer", "textobjects") end, { desc = "select around Fenced block" })
+
   end,
 }
