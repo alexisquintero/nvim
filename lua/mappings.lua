@@ -21,7 +21,6 @@ nnoremap('<C-w><C-]>', ':horizontal winc ]<CR>')
 nnoremap('<C-w>]', ':vertical winc ]<CR>')
 nnoremap('[oq', ':copen<CR>')
 nnoremap(']oq', ':cclose<CR>')
-nnoremap('z<C-g>', '<cmd>lua vim.fn.setreg("+", string.gsub(vim.api.nvim_buf_get_name(0), vim.loop.cwd(), ""))<CR>')
 nnoremap('yow', ':set wrap!<CR>')
 
 nnoremap('<leader>il', '<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>')
@@ -33,6 +32,30 @@ nnoremap('<leader>de', '<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>'
 nnoremap('<leader>dw', '<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>') -- all workspace warnings
 
 tnoremap('<leader><Esc>', '<C-\\><C-n>')
+
+-- Path "text objects": yip/yap (relative), yiP/yaP (absolute), a = with line/range
+-- NOTE: ideally this would use a native yank so that visual mode exit and TextYankPost
+-- are handled automatically, but that's only possible when yanking actual buffer text.
+-- TextYankPost is NOT triggered by these mappings.
+local function yank_path(absolute, with_line)
+  local path = vim.api.nvim_buf_get_name(0)
+  if path == '' then return end
+  path = absolute and path or vim.fn.fnamemodify(path, ':.')
+  if with_line then
+    local s, e = vim.fn.line('v'), vim.fn.line('.')
+    if s > e then s, e = e, s end
+    path = s == e and path .. ':L' .. e or path .. ':L' .. s .. '-L' .. e
+  end
+  vim.fn.setreg('+', path)
+  vim.fn.setreg('"', path)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', false)
+end
+
+vim.keymap.set({'n','x'}, 'yip', function() yank_path(false, false) end, { noremap = true, desc = 'yank relative path' })
+vim.keymap.set({'n','x'}, 'yap', function() yank_path(false, true)  end, { noremap = true, desc = 'yank relative path:line(s)' })
+vim.keymap.set({'n','x'}, 'yiP', function() yank_path(true,  false) end, { noremap = true, desc = 'yank absolute path' })
+vim.keymap.set({'n','x'}, 'yaP', function() yank_path(true,  true)  end, { noremap = true, desc = 'yank absolute path:line(s)' })
+-- Path "text objects"
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
