@@ -51,10 +51,10 @@ local function yank_path(absolute, with_line)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', false)
 end
 
-vim.keymap.set({'n','x'}, 'yip', function() yank_path(false, false) end, { noremap = true, desc = 'yank relative path' })
-vim.keymap.set({'n','x'}, 'yap', function() yank_path(false, true)  end, { noremap = true, desc = 'yank relative path:line(s)' })
-vim.keymap.set({'n','x'}, 'yiP', function() yank_path(true,  false) end, { noremap = true, desc = 'yank absolute path' })
-vim.keymap.set({'n','x'}, 'yaP', function() yank_path(true,  true)  end, { noremap = true, desc = 'yank absolute path:line(s)' })
+vim.keymap.set({'n','x'}, '<M-g>ip', function() yank_path(false, false) end, { noremap = true, desc = 'yank relative path' })
+vim.keymap.set({'n','x'}, '<M-g>ap', function() yank_path(false, true)  end, { noremap = true, desc = 'yank relative path:line(s)' })
+vim.keymap.set({'n','x'}, '<M-g>iP', function() yank_path(true,  false) end, { noremap = true, desc = 'yank absolute path' })
+vim.keymap.set({'n','x'}, '<M-g>aP', function() yank_path(true,  true)  end, { noremap = true, desc = 'yank absolute path:line(s)' })
 -- Path "text objects"
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -81,5 +81,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     lsp_mappings(bufnr)
   end,
 })
-
-
