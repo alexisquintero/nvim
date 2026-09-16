@@ -4,7 +4,8 @@
   # Standalone:
   #   nix run github:alexisquintero/nvim
   #   Uses NVIM_APPNAME=nvim-flake, isolated from any existing nvim install.
-  #   Plugins are fetched by lazy.nvim on first run into ~/.local/share/nvim-flake/
+  #   Plugins are fetched by lazy.nvim on first run into /tmp/nvim-flake/data/
+  #   (persists across runs, cleared on reboot)
   #
   # As a home-manager module:
   #   inputs.nvim-config.url = "github:alexisquintero/nvim";
@@ -45,10 +46,11 @@
               config_parent=$(mktemp -d)
               trap 'rm -rf "$config_parent"' EXIT
               ln -s ${self} "$config_parent/nvim-flake"
+              mkdir -p /tmp/nvim-flake/data /tmp/nvim-flake/state
               NVIM_APPNAME=nvim-flake \
                 XDG_CONFIG_HOME="$config_parent" \
-                XDG_DATA_HOME="$config_parent/data" \
-                XDG_STATE_HOME="$config_parent/state" \
+                XDG_DATA_HOME="/tmp/nvim-flake/data" \
+                XDG_STATE_HOME="/tmp/nvim-flake/state" \
                 exec nvim --cmd "lua vim.g.skk_jisyo='${skkJisyo pkgs}'" "$@"
             '';
           };
