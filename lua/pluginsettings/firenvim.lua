@@ -11,6 +11,7 @@ return {
     vim.g.firenvim_config = {
       localSettings = {
         [".*"] = { takeover = "never", priority = 0 },
+        ["slack.com"] = { takeover = "never", priority = 1, content = "html" },
       },
     }
   end,
