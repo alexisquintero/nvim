@@ -3,6 +3,9 @@ return {
   version = '*',
   opts = {
     keymap = { preset = 'default' },
+    completion = {
+      accept = { auto_brackets = { enabled = false } },
+    },
     sources = {
       default = { 'lazydev', 'lsp', 'path', 'buffer' },
       providers = {
