@@ -8,6 +8,10 @@
 return {
   "sudo-tee/opencode.nvim",
   cond = function() return require("has_executable")("opencode") end,
+  keys = {
+    { "<leader>oo" },
+    { "<leader>oy", mode = "v" },
+  },
   config = function()
     require("opencode").setup({
       preferred_picker = "telescope",
